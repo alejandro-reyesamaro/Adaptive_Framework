@@ -1,3 +1,14 @@
+/**
+ *  Adaptive search C++
+ *
+ *  \file bench.cpp
+ *  \brief benchmark mother class 
+ *  \author Florian Richoux
+ *  \date 2011-09-03
+ *
+ *  Copyright (C) 2011 JFLI
+ */
+
 #include "bench.h"
 
 int Bench::Cost_If_Swap(int current_cost, int i, int j)
