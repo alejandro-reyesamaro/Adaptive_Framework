@@ -36,7 +36,7 @@
 /**
  * \class MagicSquare magic_square.h
  */
-class MagicSquare
+class MagicSquare : public Bench
 {
  public:
 
