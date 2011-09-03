@@ -23,7 +23,7 @@ class Bench
    * \fn	int Cost_If_Swap(int current_cost, int i, int j)
    * \brief	Wrapper when user function Cost_If_Swap is not defined.
    * \param	current_cost: the current cost when this function is called.
-   * \param	i and j, the variables with which we simulate a swap to compute the resulting cost.
+   *		i and j, the variables with which we simulate a swap to compute the resulting cost.
    * \return	The cost if we swap variables i and j.
    */
   int Cost_If_Swap(int current_cost, int i, int j);
@@ -70,7 +70,7 @@ class Bench
    * \fn	int Reset(int n, AdData *p_ad)
    * \brief	Wrapper when user function Reset is not defined.
    * \param	n: number of reset loop to perform.
-   * \param	p_ad: pointer toward the configuration.
+   *		p_ad: pointer toward the configuration.
    * \return	The new cost, or -1 if unknown.
    */
   int Reset(int n, AdData *p_ad);
