@@ -1,0 +1,79 @@
+\begin{theindex}
+
+  \item {Bench}, \hyperpage{5}
+    \subitem {Cost\_\discretionary {-}{}{}If\_\discretionary {-}{}{}Swap}, 
+		\hyperpage{5}
+    \subitem {Cost\_\discretionary {-}{}{}On\_\discretionary {-}{}{}Variable}, 
+		\hyperpage{6}
+    \subitem {Display\_\discretionary {-}{}{}Solution}, \hyperpage{6}
+    \subitem {Executed\_\discretionary {-}{}{}Swap}, \hyperpage{6}
+    \subitem {Next\_\discretionary {-}{}{}I}, \hyperpage{6}
+    \subitem {Next\_\discretionary {-}{}{}J}, \hyperpage{6}
+    \subitem {Reset}, \hyperpage{7}
+  \item {bench.cpp}, \hyperpage{11}
+  \item {bench.h}, \hyperpage{11}
+
+  \indexspace
+
+  \item {Check\_\discretionary {-}{}{}Solution}
+    \subitem {MagicSquare}, \hyperpage{8}
+  \item {Cost\_\discretionary {-}{}{}If\_\discretionary {-}{}{}Swap}
+    \subitem {Bench}, \hyperpage{5}
+    \subitem {MagicSquare}, \hyperpage{8}
+  \item {Cost\_\discretionary {-}{}{}Of\_\discretionary {-}{}{}Solution}
+    \subitem {MagicSquare}, \hyperpage{8}
+  \item {Cost\_\discretionary {-}{}{}On\_\discretionary {-}{}{}Variable}
+    \subitem {Bench}, \hyperpage{6}
+    \subitem {MagicSquare}, \hyperpage{9}
+
+  \indexspace
+
+  \item {Display\_\discretionary {-}{}{}Solution}
+    \subitem {Bench}, \hyperpage{6}
+
+  \indexspace
+
+  \item {Executed\_\discretionary {-}{}{}Swap}
+    \subitem {Bench}, \hyperpage{6}
+    \subitem {MagicSquare}, \hyperpage{9}
+
+  \indexspace
+
+  \item {Init\_\discretionary {-}{}{}Parameters}
+    \subitem {MagicSquare}, \hyperpage{9}
+
+  \indexspace
+
+  \item {magic\_\discretionary {-}{}{}square.cpp}, \hyperpage{12}
+  \item {magic\_\discretionary {-}{}{}square.h}, \hyperpage{12}
+  \item {MagicSquare}, \hyperpage{7}
+    \subitem {Check\_\discretionary {-}{}{}Solution}, \hyperpage{8}
+    \subitem {Cost\_\discretionary {-}{}{}If\_\discretionary {-}{}{}Swap}, 
+		\hyperpage{8}
+    \subitem {Cost\_\discretionary {-}{}{}Of\_\discretionary {-}{}{}Solution}, 
+		\hyperpage{8}
+    \subitem {Cost\_\discretionary {-}{}{}On\_\discretionary {-}{}{}Variable}, 
+		\hyperpage{9}
+    \subitem {Executed\_\discretionary {-}{}{}Swap}, \hyperpage{9}
+    \subitem {Init\_\discretionary {-}{}{}Parameters}, \hyperpage{9}
+    \subitem {Solve}, \hyperpage{9}
+  \item {MagicSquare::XRef}, \hyperpage{10}
+
+  \indexspace
+
+  \item {Next\_\discretionary {-}{}{}I}
+    \subitem {Bench}, \hyperpage{6}
+  \item {Next\_\discretionary {-}{}{}J}
+    \subitem {Bench}, \hyperpage{6}
+
+  \indexspace
+
+  \item {Reset}
+    \subitem {Bench}, \hyperpage{7}
+
+  \indexspace
+
+  \item {Solve}
+    \subitem {MagicSquare}, \hyperpage{9}
+
+\end{theindex}
