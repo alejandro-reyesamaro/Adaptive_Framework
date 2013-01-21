@@ -9,6 +9,8 @@
  *  Copyright (C) 2011 JFLI
  */
 
+// mod
+
 #include "bench.h"
 
 int Bench::Cost_If_Swap(int current_cost, int i, int j)
