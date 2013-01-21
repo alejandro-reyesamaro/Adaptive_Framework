@@ -1,14 +1,14 @@
 /**
  * Adaptive search C++
  *
- * \file strategy_display_sol.h
+ * \file strategy_display_sol.hpp
  * \brief Strategy Pattern to display the solution
  * \author Florian Richoux
  * \date 2013-01-21
  */
 
 /**
- * \class StrategyDisplaySol strategy_display_sol.h
+ * \class StrategyDisplaySol strategy_display_sol.hpp
  * \brief Strategy Pattern to display the solution
  */
 class StrategyDisplaySol

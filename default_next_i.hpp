@@ -1,14 +1,14 @@
 /**
  * Adaptive search C++
  *
- * \file default_next_i.h
+ * \file default_next_i.hpp
  * \brief Default strategy to return the next i (variable) to consider
  * \author Florian Richoux
  * \date 2013-01-21
  */
 
 /**
- * \class DefaultNextI default_next_i.h
+ * \class DefaultNextI default_next_i.hpp
  * \brief Default strategy to return the next i (variable) to consider
  */
 class DefaultNextI : public StrategyNextI
@@ -21,8 +21,5 @@ class DefaultNextI : public StrategyNextI
    * \param	i: a variable.
    * \return	The next variable (i+1)
    */
-  int nextI( int i )
-  {
-    return i + 1;
-  }
+  int nextI( int i );
 };

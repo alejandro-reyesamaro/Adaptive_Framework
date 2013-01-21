@@ -1,14 +1,14 @@
 /**
  * Adaptive search C++
  *
- * \file default_display_sol.h
+ * \file default_display_sol.hpp
  * \brief Default strategy to display the solution
  * \author Florian Richoux
  * \date 2013-01-21
  */
 
 /**
- * \class DefaultDisplaySol default_display_sol.h
+ * \class DefaultDisplaySol default_display_sol.hpp
  * \brief Default strategy to display the solution
  */
 class DefaultDisplaySol : public StrategyDisplaySol
@@ -20,8 +20,5 @@ class DefaultDisplaySol : public StrategyDisplaySol
    * \brief	Wrapper when user function displaySolution is not defined.
    * \param	p_ad: Pointer toward the current configuration (or solution).
    */
-  void displaySolution( AdData *p_ad )
-  {
-    Ad_Display( p_ad->sol, p_ad, NULL );
-  }
+  void displaySolution( AdData *p_ad );
 };

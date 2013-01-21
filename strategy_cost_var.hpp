@@ -1,14 +1,14 @@
 /**
  * Adaptive search C++
  *
- * \file strategy_cost_var.h
+ * \file strategy_cost_var.hpp
  * \brief Strategy Pattern to compute the projected cost on a variable
  * \author Florian Richoux
  * \date 2013-01-21
  */
 
 /**
- * \class StrategyCostVar strategy_cost_var.h
+ * \class StrategyCostVar strategy_cost_var.hpp
  * \brief Strategy Pattern to compute the projected cost on a variable
  */
 class StrategyCostVar

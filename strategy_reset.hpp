@@ -1,14 +1,14 @@
 /**
  * Adaptive search C++
  *
- * \file strategy_reset.h
+ * \file strategy_reset.hpp
  * \brief Strategy Pattern to perform a reset
  * \author Florian Richoux
  * \date 2013-01-21
  */
 
 /**
- * \class StrategyReset strategy_reset.h
+ * \class StrategyReset strategy_reset.hpp
  * \brief Strategy Pattern to perform a reset
  */
 class StrategyReset

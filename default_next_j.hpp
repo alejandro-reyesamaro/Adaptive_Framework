@@ -1,14 +1,14 @@
 /**
  * Adaptive search C++
  *
- * \file default_next_j.h
+ * \file default_next_j.hpp
  * \brief Default strategy to return the next j (value) to consider, given i (variable)
  * \author Florian Richoux
  * \date 2013-01-21
  */
 
 /**
- * \class DefaultNextJ default_next_j.h
+ * \class DefaultNextJ default_next_j.hpp
  * \brief Default strategy to return the next j (value) to consider, given i (variable)
  */
 class DefaultNextJ : public StrategyNextJ
@@ -21,10 +21,5 @@ class DefaultNextJ : public StrategyNextJ
    * \param	i and j: two variables.
    * \return	The next j-variable (j+1), unless j < 0 (then returns i+1)
    */
-  int nextJ( int i, int j )
-  {
-    if ( j < 0 )
-      j = i;
-    return j + 1;
-  }
+  int nextJ( int i, int j );
 };

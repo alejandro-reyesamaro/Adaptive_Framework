@@ -1,14 +1,14 @@
 /**
  * Adaptive search C++
  *
- * \file bench.h
+ * \file bench.hpp
  * \brief Benchmark mother class 
  * \author Florian Richoux
  * \date 2013-01-21
  */
 
 /**
- * \class Bench bench.h
+ * \class Bench bench.hpp
  * \brief Benchmark mother class 
  */
 class Bench

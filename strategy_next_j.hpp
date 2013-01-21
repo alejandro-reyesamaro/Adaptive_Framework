@@ -1,14 +1,14 @@
 /**
  * Adaptive search C++
  *
- * \file strategy_next_j.h
+ * \file strategy_next_j.hpp
  * \brief Strategy Pattern to return the next j (value) to consider, given i (variable)
  * \author Florian Richoux
  * \date 2013-01-21
  */
 
 /**
- * \class StrategyNextJ strategy_next_j.h
+ * \class StrategyNextJ strategy_next_j.hpp
  * \brief Strategy Pattern to return the next j (value) to consider, given i (variable)
  */
 class StrategyNextJ

@@ -7,7 +7,7 @@
  * \date 2013-01-21
  */
 
-#include "bench.h"
+#include "bench.hpp"
 
 int Bench::costIfSwap( int currentCost, int i, int j )
 {

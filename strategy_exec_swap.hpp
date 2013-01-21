@@ -1,14 +1,14 @@
 /**
  * Adaptive search C++
  *
- * \file strategy_exec_swap.h
+ * \file strategy_exec_swap.hpp
  * \brief Strategy Pattern to execute a swap
  * \author Florian Richoux
  * \date 2013-01-21
  */
 
 /**
- * \class StrategyExecSwap strategy_exec_swap.h
+ * \class StrategyExecSwap strategy_exec_swap.hpp
  * \brief Strategy Pattern to execute a swap
  */
 class StrategyExecSwap
