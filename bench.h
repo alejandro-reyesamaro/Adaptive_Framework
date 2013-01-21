@@ -1,77 +1,90 @@
 /**
- *  Adaptive search C++
+ * Adaptive search C++
  *
- *  \file bench.h
- *  \brief benchmark mother class 
- *  \author Florian Richoux
- *  \date 2011-09-03
- *
- *  Copyright (C) 2011 JFLI
+ * \file bench.h
+ * \brief Benchmark mother class 
+ * \author Florian Richoux
+ * \date 2013-01-21
  */
 
 /**
  * \class Bench bench.h
+ * \brief Benchmark mother class 
  */
 class Bench
 {
  public:
-  /*
-   * Functions by default
-   */
+
+  StrategyCostSwap	strategyCostSwap;	/**< Stragety Pattern to compute the cost of a swap */
+
+  StrategyCostVar	strategyCostVar;	/**< Stragety Pattern to compute 
+						   the projected cost on a variable */
+
+  StrategyDisplaySol	strategyDisplaySol;	/**< Stragety Pattern to display the solution */
+
+  StrategyExecSwap	strategyExecSwap;	/**< Stragety Pattern to execute a swap */
+
+  StrategyNextI		strategyNextI;		/**< Stragety Pattern to return 
+						   the next i (variable) to consider */
+
+  StrategyNextJ		strategyNextJ;		/**< Stragety Pattern to return 
+						   the next j (value) to consider, given i (variable) */
+
+  StrategyReset		strategyReset;		/**< Stragety Pattern to perform a reset */
 
   /**
-   * \fn	int Cost_If_Swap(int current_cost, int i, int j)
-   * \brief	Wrapper when user function Cost_If_Swap is not defined.
-   * \param	current_cost: the current cost when this function is called.
+   * \fn	int costIfSwap( int currentCost, int i, int j )
+   * \brief	Wrapper when user function costIfSwap is not defined.
+   * \param	currentCost: the current cost when this function is called.
    *		i and j, the variables with which we simulate a swap to compute the resulting cost.
    * \return	The cost if we swap variables i and j.
    */
-  int Cost_If_Swap(int current_cost, int i, int j);
+  int costIfSwap( int currentCost, int i, int j );
 
   /**
-   * \fn	int Cost_On_Variable(int k)
-   * \brief	Wrapper when user function Cost_On_Variable is not defined.
+   * \fn	int costOnVariable( int k )
+   * \brief	Wrapper when user function costOnVariable is not defined.
    * \param	k: the variable on which we project the cost.
    * \return	The cost projected on variable k.
    */
-  int Cost_On_Variable(int k);
+  int costOnVariable( int k );
 
   /**
-   * \fn	void Display_Solution(AdData *p_ad)
-   * \brief	Wrapper when user function Display_Solution is not defined.
+   * \fn	void displaySolution( AdData *p_ad )
+   * \brief	Wrapper when user function displaySolution is not defined.
    * \param	p_ad: Pointer toward the current configuration (or solution).
    */
-  void Display_Solution(AdData *p_ad);
+  void displaySolution( AdData *p_ad );
 
   /**
-   * \fn	void Executed_Swap(int k1, int k2)
-   * \brief	Wrapper when user function Executed_Swap is not defined.
+   * \fn	void executedSwap( int k1, int k2 )
+   * \brief	Wrapper when user function executedSwap is not defined.
    * \param	k1 and k2: variables to swap.
    */
-  void Executed_Swap(int k1, int k2);
+  void executedSwap( int k1, int k2 );
 
   /**
-   * \fn	int Next_I(int i)
-   * \brief	Wrapper when user function Next_I is not defined.
+   * \fn	int nextI( int i )
+   * \brief	Wrapper when user function nextI is not defined.
    * \param	i: a variable.
    * \return	The next variable (i+1)
    */
-  int Next_I(int i);
+  int nextI( int i );
 
   /**
-   * \fn	int Next_J(int i, int j)
-   * \brief	Wrapper when user function Next_J is not defined.
+   * \fn	int nextJ( int i, int j )
+   * \brief	Wrapper when user function nextJ is not defined.
    * \param	i and j: two variables.
    * \return	The next j-variable (j+1), unless j < 0 (then returns i+1)
    */
-  int Next_J(int i, int j);
+  int nextJ( int i, int j );
 
   /**
-   * \fn	int Reset(int n, AdData *p_ad)
-   * \brief	Wrapper when user function Reset is not defined.
+   * \fn	int reset( int n, AdData *p_ad )
+   * \brief	Wrapper when user function reset is not defined.
    * \param	n: number of reset loop to perform.
    *		p_ad: pointer toward the configuration.
    * \return	The new cost, or -1 if unknown.
    */
-  int Reset(int n, AdData *p_ad);
+  int reset( int n, AdData *p_ad );
 };

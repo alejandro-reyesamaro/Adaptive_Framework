@@ -1,0 +1,59 @@
+\hypertarget{classStrategyCostSwap}{\section{\-Strategy\-Cost\-Swap \-Class \-Reference}
+\label{classStrategyCostSwap}\index{\-Strategy\-Cost\-Swap@{\-Strategy\-Cost\-Swap}}
+}
+
+
+\-Strategy \-Pattern to compute the cost of a swap.  
+
+
+
+
+{\ttfamily \#include $<$strategy\-\_\-cost\-\_\-swap.\-h$>$}
+
+\-Inheritance diagram for \-Strategy\-Cost\-Swap\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classStrategyCostSwap}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \hyperlink{classStrategyCostSwap_a154e8db5c0e7cc22bd33942bbe4b8618}{cost\-If\-Swap} (int current\-Cost, int i, int j)=0
+\begin{DoxyCompactList}\small\item\em \-Virtual wrapper when user function cost\-If\-Swap is not defined. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Strategy \-Pattern to compute the cost of a swap. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classStrategyCostSwap_a154e8db5c0e7cc22bd33942bbe4b8618}{\index{\-Strategy\-Cost\-Swap@{\-Strategy\-Cost\-Swap}!cost\-If\-Swap@{cost\-If\-Swap}}
+\index{cost\-If\-Swap@{cost\-If\-Swap}!StrategyCostSwap@{\-Strategy\-Cost\-Swap}}
+\subsubsection[{cost\-If\-Swap}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Strategy\-Cost\-Swap\-::cost\-If\-Swap} (
+\begin{DoxyParamCaption}
+\item[{int}]{current\-Cost, }
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{classStrategyCostSwap_a154e8db5c0e7cc22bd33942bbe4b8618}
+
+
+\-Virtual wrapper when user function cost\-If\-Swap is not defined. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em current\-Cost,\-:} & the current cost when this function is called. i and j, the variables with which we simulate a swap to compute the resulting cost. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The cost if we swap variables i and j. 
+\end{DoxyReturn}
+
+
+\-Implemented in \hyperlink{classDefaultCostSwap_a62c43925fb3f931b12f92d3a1bbfc55f}{\-Default\-Cost\-Swap}.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{strategy__cost__swap_8h}{strategy\-\_\-cost\-\_\-swap.\-h}\end{DoxyCompactItemize}

@@ -1,84 +1,45 @@
 /**
- *  Adaptive search C++
+ * Adaptive search C++
  *
- *  \file bench.cpp
- *  \brief benchmark mother class 
- *  \author Florian Richoux
- *  \date 2011-09-03
- *
- *  Copyright (C) 2011 JFLI
+ * \file bench.cpp
+ * \brief Benchmark mother class 
+ * \author Florian Richoux
+ * \date 2013-01-21
  */
-
-// mod
 
 #include "bench.h"
 
-int Bench::Cost_If_Swap(int current_cost, int i, int j)
+int Bench::costIfSwap( int currentCost, int i, int j )
 {
-  int x;
-  int r;
-
-  x = ad_sol[i];
-  ad_sol[i] = ad_sol[j];
-  ad_sol[j] = x;
-
-  r = Cost_Of_Solution(0);
-
-  ad_sol[j] = ad_sol[i];
-  ad_sol[i] = x;
-
-  if (ad_reinit_after_if_swap)
-    Cost_Of_Solution(0);
-
-  return r;
+  return strategyCostSwap.costIfSwap( currentCost, i, j );
 }
 
-int Bench::Cost_On_Variable(int k)
+int Bench::costOnVariable( int k )
 {
-  fprintf(stderr, "%s:%d: error: wrapper Cost_On_Variable function called\n",
-	  __FILE__, __LINE__);
-  return 0;
+  return strategyCostOnVar.costOnVariable( k );
 }
 
-void Bench::Display_Solution(AdData *p_ad)
+void Bench::displaySolution( AdData *p_ad )
 {
-  Ad_Display(p_ad->sol, p_ad, NULL);
+  strategyDisplaySol.displaySolution( p_ad );
 }
 
-void Bench::Executed_Swap(int k1, int k2)
+void Bench::executedSwap( int k1, int k2 )
 {
-  //  ad.total_cost = Cost_Of_Solution(1);
+  strategyExecSwap.displaySolution( p_ad );
 }
 
-int Bench::Next_I(int i)
+int Bench::nextI( int i )
 {
-  return i + 1;
+  return strategyNextI.nextI( i );
 }
 
-int Bench::Next_J(int i, int j)
+int Bench::nextJ( int i, int j )
 {
-  if (j < 0)
-    j = i;
-  return j + 1;
+  return strategyNextJ.nextJ( i, j );
 }
 
-int Bench::Reset(int n, AdData *p_ad)
+int Bench::reset( int n, AdData *p_ad )
 {
-  int i, j, x;
-  int size = p_ad->size;
-  int *sol = p_ad->sol;
-
-  while(n--)
-    {
-      i = Random(size);
-      j = Random(size);
-
-      p_ad->nb_swap++;
-
-      x = sol[i];
-      sol[i] = sol[j];
-      sol[j] = x;
-    }
-
-  return -1;
+  return strategyReset.reset( n, p_ad );
 }
