@@ -1,6 +1,15 @@
 \hypertarget{classMagicSquare}{\section{\-Magic\-Square \-Class \-Reference}
 \label{classMagicSquare}\index{\-Magic\-Square@{\-Magic\-Square}}
 }
+
+
+\-Magic \-Square benchmark.  
+
+
+
+
+{\ttfamily \#include $<$magic\-\_\-square.\-hpp$>$}
+
 \-Inheritance diagram for \-Magic\-Square\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,19 +24,19 @@ struct \hyperlink{structMagicSquare_1_1XRef}{\-X\-Ref}
 \subsection*{\-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{classMagicSquare_a3d43d7fa15f945e20491ec1125bd0d44}{\-Solve} (\-Ad\-Data $\ast$p\-\_\-ad)
+void \hyperlink{classMagicSquare_a78393622fa3f92fe35d1dd0e97e3c0df}{solve} (\-Ad\-Data $\ast$p\-\_\-ad)
 \begin{DoxyCompactList}\small\item\em \-Initializations needed for the resolution. \end{DoxyCompactList}\item 
-int \hyperlink{classMagicSquare_a7e45a2e9c128850bfb6717613a014fff}{\-Cost\-\_\-\-Of\-\_\-\-Solution} (int should\-\_\-be\-\_\-recorded)
-\begin{DoxyCompactList}\small\item\em \-Computes the total cost of the current solution. \-Also computes errors on constraints for subsequent calls to \-Cost\-\_\-\-On\-\_\-\-Variable, \-Cost\-\_\-\-If\-\_\-\-Swap and \-Executed\-\_\-\-Swap. \end{DoxyCompactList}\item 
-int \hyperlink{classMagicSquare_ae7ededec4689d278c83dc833c3a4b248}{\-Cost\-\_\-\-On\-\_\-\-Variable} (int k)
+int \hyperlink{classMagicSquare_a8c4a080666b26014b9ed1d8fc8a97470}{cost\-Of\-Solution} (int should\-Be\-Recorded)
+\begin{DoxyCompactList}\small\item\em \-Computes the total cost of the current solution. \-Also computes errors on constraints for subsequent calls to cost\-On\-Variable, cost\-If\-Swap and executed\-Swap. \end{DoxyCompactList}\item 
+int \hyperlink{classMagicSquare_ae57a2b1183f82870cdd63fddeeb078fe}{cost\-On\-Variable} (int k)
 \begin{DoxyCompactList}\small\item\em \-Evaluates the error on a variable. \end{DoxyCompactList}\item 
-int \hyperlink{classMagicSquare_a349868bc563431930a695795e8de84ed}{\-Cost\-\_\-\-If\-\_\-\-Swap} (int current\-\_\-cost, int k1, int k2)
+int \hyperlink{classMagicSquare_a3904934cb8ef871455a57dd0dd9be7ea}{cost\-If\-Swap} (int current\-Cost, int k1, int k2)
 \begin{DoxyCompactList}\small\item\em \-Computes the cost if we swap k1 and k2. \-No swaps are recorded. \end{DoxyCompactList}\item 
-void \hyperlink{classMagicSquare_a4764e5e4485406f07f09c13307780757}{\-Executed\-\_\-\-Swap} (int k1, int k2)
+void \hyperlink{classMagicSquare_a63c7d1ad48a11ff2e2b1889ae883cc0d}{executed\-Swap} (int k1, int k2)
 \begin{DoxyCompactList}\small\item\em \-Records a swap between k1 and k2. \end{DoxyCompactList}\item 
-void \hyperlink{classMagicSquare_a21aa228edea478e4240fb3c27024f670}{\-Init\-\_\-\-Parameters} (\-Ad\-Data $\ast$p\-\_\-ad)
+void \hyperlink{classMagicSquare_a822df6377b8511394629d796ab8bb690}{init\-Parameters} (\-Ad\-Data $\ast$p\-\_\-ad)
 \begin{DoxyCompactList}\small\item\em \-Initializes parameters like freeze\-\_\-swap, reset\-\_\-percent, ... \end{DoxyCompactList}\item 
-int \hyperlink{classMagicSquare_a23b9fe6d1e267d66847e8bcb2b575738}{\-Check\-\_\-\-Solution} (\-Ad\-Data $\ast$p\-\_\-ad)
+int \hyperlink{classMagicSquare_a8370790cee1a866ef1e1cead34f2fb69}{check\-Solution} (\-Ad\-Data $\ast$p\-\_\-ad)
 \begin{DoxyCompactList}\small\item\em \-Checks if the configuration is a solution. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{\-Static \-Public \-Attributes}
 \begin{DoxyCompactItemize}
@@ -79,14 +88,17 @@ int \hyperlink{classMagicSquare_a23b9fe6d1e267d66847e8bcb2b575738}{\-Check\-\_\-
 \end{DoxyCompactItemize}
 
 
+\subsection{\-Detailed \-Description}
+\-Magic \-Square benchmark. 
+
 \subsection{\-Member \-Function \-Documentation}
-\hypertarget{classMagicSquare_a23b9fe6d1e267d66847e8bcb2b575738}{\index{\-Magic\-Square@{\-Magic\-Square}!\-Check\-\_\-\-Solution@{\-Check\-\_\-\-Solution}}
-\index{\-Check\-\_\-\-Solution@{\-Check\-\_\-\-Solution}!MagicSquare@{\-Magic\-Square}}
-\subsubsection[{\-Check\-\_\-\-Solution}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Magic\-Square\-::\-Check\-\_\-\-Solution} (
+\hypertarget{classMagicSquare_a8370790cee1a866ef1e1cead34f2fb69}{\index{\-Magic\-Square@{\-Magic\-Square}!check\-Solution@{check\-Solution}}
+\index{check\-Solution@{check\-Solution}!MagicSquare@{\-Magic\-Square}}
+\subsubsection[{check\-Solution}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Magic\-Square\-::check\-Solution} (
 \begin{DoxyParamCaption}
 \item[{\-Ad\-Data $\ast$}]{p\-\_\-ad}
 \end{DoxyParamCaption}
-)}}\label{classMagicSquare_a23b9fe6d1e267d66847e8bcb2b575738}
+)}}\label{classMagicSquare_a8370790cee1a866ef1e1cead34f2fb69}
 
 
 \-Checks if the configuration is a solution. 
@@ -99,22 +111,22 @@ int \hyperlink{classMagicSquare_a23b9fe6d1e267d66847e8bcb2b575738}{\-Check\-\_\-
 \begin{DoxyReturn}{\-Returns}
 1 if the configuration is a solution, 0 otherwise. 
 \end{DoxyReturn}
-\hypertarget{classMagicSquare_a349868bc563431930a695795e8de84ed}{\index{\-Magic\-Square@{\-Magic\-Square}!\-Cost\-\_\-\-If\-\_\-\-Swap@{\-Cost\-\_\-\-If\-\_\-\-Swap}}
-\index{\-Cost\-\_\-\-If\-\_\-\-Swap@{\-Cost\-\_\-\-If\-\_\-\-Swap}!MagicSquare@{\-Magic\-Square}}
-\subsubsection[{\-Cost\-\_\-\-If\-\_\-\-Swap}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Magic\-Square\-::\-Cost\-\_\-\-If\-\_\-\-Swap} (
+\hypertarget{classMagicSquare_a3904934cb8ef871455a57dd0dd9be7ea}{\index{\-Magic\-Square@{\-Magic\-Square}!cost\-If\-Swap@{cost\-If\-Swap}}
+\index{cost\-If\-Swap@{cost\-If\-Swap}!MagicSquare@{\-Magic\-Square}}
+\subsubsection[{cost\-If\-Swap}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Magic\-Square\-::cost\-If\-Swap} (
 \begin{DoxyParamCaption}
-\item[{int}]{current\-\_\-cost, }
+\item[{int}]{current\-Cost, }
 \item[{int}]{i, }
 \item[{int}]{j}
 \end{DoxyParamCaption}
-)}}\label{classMagicSquare_a349868bc563431930a695795e8de84ed}
+)}}\label{classMagicSquare_a3904934cb8ef871455a57dd0dd9be7ea}
 
 
 \-Computes the cost if we swap k1 and k2. \-No swaps are recorded. 
 
 
 \begin{DoxyParams}{\-Parameters}
-{\em current\-\_\-cost,\-:} & the current cost when this function is called. \\
+{\em current\-Cost,\-:} & the current cost when this function is called. \\
 \hline
 {\em i} & and j, the variables with which we simulate a swap to compute the resulting cost. \\
 \hline
@@ -122,32 +134,36 @@ int \hyperlink{classMagicSquare_a23b9fe6d1e267d66847e8bcb2b575738}{\-Check\-\_\-
 \begin{DoxyReturn}{\-Returns}
 \-The cost if we swap variables i and j. 
 \end{DoxyReturn}
-\hypertarget{classMagicSquare_a7e45a2e9c128850bfb6717613a014fff}{\index{\-Magic\-Square@{\-Magic\-Square}!\-Cost\-\_\-\-Of\-\_\-\-Solution@{\-Cost\-\_\-\-Of\-\_\-\-Solution}}
-\index{\-Cost\-\_\-\-Of\-\_\-\-Solution@{\-Cost\-\_\-\-Of\-\_\-\-Solution}!MagicSquare@{\-Magic\-Square}}
-\subsubsection[{\-Cost\-\_\-\-Of\-\_\-\-Solution}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Magic\-Square\-::\-Cost\-\_\-\-Of\-\_\-\-Solution} (
+
+
+\-Reimplemented from \hyperlink{classBench_a5d88ce438e5ff9259f872bdcfe86621e}{\-Bench}.
+
+\hypertarget{classMagicSquare_a8c4a080666b26014b9ed1d8fc8a97470}{\index{\-Magic\-Square@{\-Magic\-Square}!cost\-Of\-Solution@{cost\-Of\-Solution}}
+\index{cost\-Of\-Solution@{cost\-Of\-Solution}!MagicSquare@{\-Magic\-Square}}
+\subsubsection[{cost\-Of\-Solution}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Magic\-Square\-::cost\-Of\-Solution} (
 \begin{DoxyParamCaption}
-\item[{int}]{should\-\_\-be\-\_\-recorded}
+\item[{int}]{should\-Be\-Recorded}
 \end{DoxyParamCaption}
-)}}\label{classMagicSquare_a7e45a2e9c128850bfb6717613a014fff}
+)}}\label{classMagicSquare_a8c4a080666b26014b9ed1d8fc8a97470}
 
 
-\-Computes the total cost of the current solution. \-Also computes errors on constraints for subsequent calls to \-Cost\-\_\-\-On\-\_\-\-Variable, \-Cost\-\_\-\-If\-\_\-\-Swap and \-Executed\-\_\-\-Swap. 
+\-Computes the total cost of the current solution. \-Also computes errors on constraints for subsequent calls to cost\-On\-Variable, cost\-If\-Swap and executed\-Swap. 
 
 
 \begin{DoxyParams}{\-Parameters}
-{\em should\-\_\-be\-\_\-recorded,\-:} & dummy input. \\
+{\em should\-Be\-Recorded,\-:} & dummy input. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{\-Returns}
 \-The cost of the current configuration. 
 \end{DoxyReturn}
-\hypertarget{classMagicSquare_ae7ededec4689d278c83dc833c3a4b248}{\index{\-Magic\-Square@{\-Magic\-Square}!\-Cost\-\_\-\-On\-\_\-\-Variable@{\-Cost\-\_\-\-On\-\_\-\-Variable}}
-\index{\-Cost\-\_\-\-On\-\_\-\-Variable@{\-Cost\-\_\-\-On\-\_\-\-Variable}!MagicSquare@{\-Magic\-Square}}
-\subsubsection[{\-Cost\-\_\-\-On\-\_\-\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Magic\-Square\-::\-Cost\-\_\-\-On\-\_\-\-Variable} (
+\hypertarget{classMagicSquare_ae57a2b1183f82870cdd63fddeeb078fe}{\index{\-Magic\-Square@{\-Magic\-Square}!cost\-On\-Variable@{cost\-On\-Variable}}
+\index{cost\-On\-Variable@{cost\-On\-Variable}!MagicSquare@{\-Magic\-Square}}
+\subsubsection[{cost\-On\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Magic\-Square\-::cost\-On\-Variable} (
 \begin{DoxyParamCaption}
 \item[{int}]{k}
 \end{DoxyParamCaption}
-)}}\label{classMagicSquare_ae7ededec4689d278c83dc833c3a4b248}
+)}}\label{classMagicSquare_ae57a2b1183f82870cdd63fddeeb078fe}
 
 
 \-Evaluates the error on a variable. 
@@ -160,14 +176,18 @@ int \hyperlink{classMagicSquare_a23b9fe6d1e267d66847e8bcb2b575738}{\-Check\-\_\-
 \begin{DoxyReturn}{\-Returns}
 \-The cost projected on variable k. 
 \end{DoxyReturn}
-\hypertarget{classMagicSquare_a4764e5e4485406f07f09c13307780757}{\index{\-Magic\-Square@{\-Magic\-Square}!\-Executed\-\_\-\-Swap@{\-Executed\-\_\-\-Swap}}
-\index{\-Executed\-\_\-\-Swap@{\-Executed\-\_\-\-Swap}!MagicSquare@{\-Magic\-Square}}
-\subsubsection[{\-Executed\-\_\-\-Swap}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Magic\-Square\-::\-Executed\-\_\-\-Swap} (
+
+
+\-Reimplemented from \hyperlink{classBench_af27d153047259b80af7b556c0bfdadab}{\-Bench}.
+
+\hypertarget{classMagicSquare_a63c7d1ad48a11ff2e2b1889ae883cc0d}{\index{\-Magic\-Square@{\-Magic\-Square}!executed\-Swap@{executed\-Swap}}
+\index{executed\-Swap@{executed\-Swap}!MagicSquare@{\-Magic\-Square}}
+\subsubsection[{executed\-Swap}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Magic\-Square\-::executed\-Swap} (
 \begin{DoxyParamCaption}
 \item[{int}]{k1, }
 \item[{int}]{k2}
 \end{DoxyParamCaption}
-)}}\label{classMagicSquare_a4764e5e4485406f07f09c13307780757}
+)}}\label{classMagicSquare_a63c7d1ad48a11ff2e2b1889ae883cc0d}
 
 
 \-Records a swap between k1 and k2. 
@@ -177,13 +197,17 @@ int \hyperlink{classMagicSquare_a23b9fe6d1e267d66847e8bcb2b575738}{\-Check\-\_\-
 {\em k1} & and k2\-: variables to swap. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classMagicSquare_a21aa228edea478e4240fb3c27024f670}{\index{\-Magic\-Square@{\-Magic\-Square}!\-Init\-\_\-\-Parameters@{\-Init\-\_\-\-Parameters}}
-\index{\-Init\-\_\-\-Parameters@{\-Init\-\_\-\-Parameters}!MagicSquare@{\-Magic\-Square}}
-\subsubsection[{\-Init\-\_\-\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Magic\-Square\-::\-Init\-\_\-\-Parameters} (
+
+
+\-Reimplemented from \hyperlink{classBench_a0985e6c65a50742c898dd717dce2294c}{\-Bench}.
+
+\hypertarget{classMagicSquare_a822df6377b8511394629d796ab8bb690}{\index{\-Magic\-Square@{\-Magic\-Square}!init\-Parameters@{init\-Parameters}}
+\index{init\-Parameters@{init\-Parameters}!MagicSquare@{\-Magic\-Square}}
+\subsubsection[{init\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Magic\-Square\-::init\-Parameters} (
 \begin{DoxyParamCaption}
 \item[{\-Ad\-Data $\ast$}]{p\-\_\-ad}
 \end{DoxyParamCaption}
-)}}\label{classMagicSquare_a21aa228edea478e4240fb3c27024f670}
+)}}\label{classMagicSquare_a822df6377b8511394629d796ab8bb690}
 
 
 \-Initializes parameters like freeze\-\_\-swap, reset\-\_\-percent, ... 
@@ -193,13 +217,13 @@ int \hyperlink{classMagicSquare_a23b9fe6d1e267d66847e8bcb2b575738}{\-Check\-\_\-
 {\em p\-\_\-ad,\-:} & \-Pointer toward the current configuration. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classMagicSquare_a3d43d7fa15f945e20491ec1125bd0d44}{\index{\-Magic\-Square@{\-Magic\-Square}!\-Solve@{\-Solve}}
-\index{\-Solve@{\-Solve}!MagicSquare@{\-Magic\-Square}}
-\subsubsection[{\-Solve}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Magic\-Square\-::\-Solve} (
+\hypertarget{classMagicSquare_a78393622fa3f92fe35d1dd0e97e3c0df}{\index{\-Magic\-Square@{\-Magic\-Square}!solve@{solve}}
+\index{solve@{solve}!MagicSquare@{\-Magic\-Square}}
+\subsubsection[{solve}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Magic\-Square\-::solve} (
 \begin{DoxyParamCaption}
 \item[{\-Ad\-Data $\ast$}]{p\-\_\-ad}
 \end{DoxyParamCaption}
-)}}\label{classMagicSquare_a3d43d7fa15f945e20491ec1125bd0d44}
+)}}\label{classMagicSquare_a78393622fa3f92fe35d1dd0e97e3c0df}
 
 
 \-Initializations needed for the resolution. 
@@ -213,5 +237,5 @@ int \hyperlink{classMagicSquare_a23b9fe6d1e267d66847e8bcb2b575738}{\-Check\-\_\-
 
 \-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{magic__square_8h}{magic\-\_\-square.\-h}\item 
+\hyperlink{magic__square_8hpp}{magic\-\_\-square.\-hpp}\item 
 \hyperlink{magic__square_8cpp}{magic\-\_\-square.\-cpp}\end{DoxyCompactItemize}

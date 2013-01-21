@@ -1,13 +1,10 @@
 /**
- *  Adaptive search C++
+ * Adaptive search C++
  *
- *  \file magic_square.h
- *  \brief Magic Square benchmark 
- *  \author Florian Richoux
- *  \date 2011-09-03
- *
- *  Copyright (C) 2011 JFLI
- *
+ * \file magic_square.hpp
+ * \brief Magic Square benchmark 
+ * \author Florian Richoux
+ * \date 2013-01-21
  *
  *  sol[] = vector of values (by line),
  *             sol[0..square_length-1] contain the first line, 
@@ -34,7 +31,8 @@
  */
 
 /**
- * \class MagicSquare magic_square.h
+ * \class MagicSquare magic_square.hpp
+ * \brief Magic Square benchmark 
  */
 class MagicSquare : public Bench
 {
@@ -81,57 +79,57 @@ class MagicSquare : public Bench
  *-----------*/
 
   /**
-   * \fn	void Solve(AdData *p_ad)
+   * \fn	void solve( AdData *p_ad )
    * \brief	Initializations needed for the resolution.
    * \param	p_ad: Pointer toward the current configuration.
    */
-  void Solve(AdData *p_ad);
+  void solve( AdData *p_ad );
 
   /**
-   * \fn	int Cost_Of_Solution(int should_be_recorded)
+   * \fn	int costOfSolution( int shouldBeRecorded )
    * \brief	Computes the total cost of the current solution.
-   *		Also computes errors on constraints for subsequent calls to Cost_On_Variable, Cost_If_Swap and Executed_Swap.
-   * \param	should_be_recorded: dummy input.
+   *		Also computes errors on constraints for subsequent calls to costOnVariable, costIfSwap and executedSwap.
+   * \param	shouldBeRecorded: dummy input.
    * \return	The cost of the current configuration.
    */
-  int Cost_Of_Solution(int should_be_recorded);
+  int costOfSolution( int shouldBeRecorded );
 
   /**
-   * \fn	int Cost_On_Variable(int k)
+   * \fn	int costOnVariable( int k )
    * \brief	Evaluates the error on a variable.
    * \param	k: the variable on which we project the cost.
    * \return	The cost projected on variable k.
    */
-  int Cost_On_Variable(int k);
+  int costOnVariable( int k );
 
   /**
-   * \fn	int Cost_If_Swap(int current_cost, int i, int j)
+   * \fn	int costIfSwap( int currentCost, int i, int j )
    * \brief	Computes the cost if we swap k1 and k2. No swaps are recorded.
-   * \param	current_cost: the current cost when this function is called.
+   * \param	currentCost: the current cost when this function is called.
    * \param	i and j, the variables with which we simulate a swap to compute the resulting cost.
    * \return	The cost if we swap variables i and j.
    */
-  int Cost_If_Swap(int current_cost, int k1, int k2);
+  int costIfSwap( int currentCost, int k1, int k2 );
 
   /**
-   * \fn	void Executed_Swap(int k1, int k2)
+   * \fn	void executedSwap( int k1, int k2 )
    * \brief	Records a swap between k1 and k2.
    * \param	k1 and k2: variables to swap.
    */
-  void Executed_Swap(int k1, int k2);
+  void executedSwap( int k1, int k2 );
 
   /**
-   * \fn	void Init_Parameters(AdData *p_ad)
+   * \fn	void initParameters( AdData *p_ad )
    * \brief	Initializes parameters like freeze_swap, reset_percent, ...
    * \param	p_ad: Pointer toward the current configuration.
    */
-  void Init_Parameters(AdData *p_ad);
+  void initParameters( AdData *p_ad );
 
   /**
-   * \fn	int Check_Solution(AdData *p_ad)
+   * \fn	int checkSolution( AdData *p_ad )
    * \brief	Checks if the configuration is a solution.
    * \param	p_ad: Pointer toward the current configuration.
    * \return	1 if the configuration is a solution, 0 otherwise.
    */
-  int Check_Solution(AdData *p_ad);
+  int checkSolution( AdData *p_ad );
 };

@@ -4,12 +4,10 @@
  *  \file magic_square.cpp
  *  \brief Magic Square benchmark 
  *  \author Florian Richoux
- *  \date 2011-09-03
- *
- *  Copyright (C) 2011 JFLI
+ *  \date 2013-01-21
  */
 
-void MagicSquare::Solve(AdData *p_ad)
+void MagicSquare::solve( AdData *p_ad )
 {
   int i, j, k;
   XRef xr;
@@ -52,7 +50,7 @@ void MagicSquare::Solve(AdData *p_ad)
   Ad_Solve(p_ad);
 }
 
-int MagicSquare::Cost_Of_Solution(int should_be_recorded)
+int MagicSquare::costOfSolution( int should_be_recorded )
 {
   int k, r;
   int neg_avg = -avg;
@@ -209,7 +207,7 @@ void MagicSquare::Executed_Swap(int k1, int k2)
 
 
 int param_needed = 1;		/* overwrite var of main.c */
-void MagicSquare::Init_Parameters(AdData *p_ad)
+void MagicSquare::initParameters( AdData *p_ad )
 {
   int square_length = p_ad->param;
 
@@ -246,7 +244,7 @@ void MagicSquare::Init_Parameters(AdData *p_ad)
     p_ad->restart_max = 0;
 }
 
-int MagicSquare::Check_Solution(AdData *p_ad)
+int MagicSquare::checkSolution( AdData *p_ad )
 {
   int square_length = p_ad->param;
   int *sol = p_ad->sol;

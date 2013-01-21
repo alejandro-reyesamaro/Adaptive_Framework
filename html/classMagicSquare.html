@@ -65,7 +65,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">MagicSquare Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="MagicSquare" --><!-- doxytag: inherits="Bench" --><div class="dynheader">
+<!-- doxytag: class="MagicSquare" --><!-- doxytag: inherits="Bench" -->
+<p>Magic Square benchmark.  
+ <a href="classMagicSquare.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="magic__square_8hpp_source.html">magic_square.hpp</a>&gt;</code></p>
+<div class="dynheader">
 Inheritance diagram for MagicSquare:</div>
 <div class="dyncontent">
  <div class="center">
@@ -82,20 +87,20 @@ Classes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMagicSquare_1_1XRef.html">XRef</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMagicSquare.html#a3d43d7fa15f945e20491ec1125bd0d44">Solve</a> (AdData *p_ad)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializations needed for the resolution.  <a href="#a3d43d7fa15f945e20491ec1125bd0d44"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMagicSquare.html#a7e45a2e9c128850bfb6717613a014fff">Cost_Of_Solution</a> (int should_be_recorded)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the total cost of the current solution. Also computes errors on constraints for subsequent calls to Cost_On_Variable, Cost_If_Swap and Executed_Swap.  <a href="#a7e45a2e9c128850bfb6717613a014fff"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMagicSquare.html#ae7ededec4689d278c83dc833c3a4b248">Cost_On_Variable</a> (int k)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the error on a variable.  <a href="#ae7ededec4689d278c83dc833c3a4b248"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMagicSquare.html#a349868bc563431930a695795e8de84ed">Cost_If_Swap</a> (int current_cost, int k1, int k2)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the cost if we swap k1 and k2. No swaps are recorded.  <a href="#a349868bc563431930a695795e8de84ed"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMagicSquare.html#a4764e5e4485406f07f09c13307780757">Executed_Swap</a> (int k1, int k2)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Records a swap between k1 and k2.  <a href="#a4764e5e4485406f07f09c13307780757"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMagicSquare.html#a21aa228edea478e4240fb3c27024f670">Init_Parameters</a> (AdData *p_ad)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes parameters like freeze_swap, reset_percent, ...  <a href="#a21aa228edea478e4240fb3c27024f670"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMagicSquare.html#a23b9fe6d1e267d66847e8bcb2b575738">Check_Solution</a> (AdData *p_ad)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the configuration is a solution.  <a href="#a23b9fe6d1e267d66847e8bcb2b575738"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMagicSquare.html#a78393622fa3f92fe35d1dd0e97e3c0df">solve</a> (AdData *p_ad)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializations needed for the resolution.  <a href="#a78393622fa3f92fe35d1dd0e97e3c0df"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMagicSquare.html#a8c4a080666b26014b9ed1d8fc8a97470">costOfSolution</a> (int shouldBeRecorded)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the total cost of the current solution. Also computes errors on constraints for subsequent calls to costOnVariable, costIfSwap and executedSwap.  <a href="#a8c4a080666b26014b9ed1d8fc8a97470"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMagicSquare.html#ae57a2b1183f82870cdd63fddeeb078fe">costOnVariable</a> (int k)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the error on a variable.  <a href="#ae57a2b1183f82870cdd63fddeeb078fe"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMagicSquare.html#a3904934cb8ef871455a57dd0dd9be7ea">costIfSwap</a> (int currentCost, int k1, int k2)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the cost if we swap k1 and k2. No swaps are recorded.  <a href="#a3904934cb8ef871455a57dd0dd9be7ea"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMagicSquare.html#a63c7d1ad48a11ff2e2b1889ae883cc0d">executedSwap</a> (int k1, int k2)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Records a swap between k1 and k2.  <a href="#a63c7d1ad48a11ff2e2b1889ae883cc0d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMagicSquare.html#a822df6377b8511394629d796ab8bb690">initParameters</a> (AdData *p_ad)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes parameters like freeze_swap, reset_percent, ...  <a href="#a822df6377b8511394629d796ab8bb690"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMagicSquare.html#a8370790cee1a866ef1e1cead34f2fb69">checkSolution</a> (AdData *p_ad)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the configuration is a solution.  <a href="#a8370790cee1a866ef1e1cead34f2fb69"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a526285b917194501dcf6656dc758926a"></a><!-- doxytag: member="MagicSquare::size" ref="a526285b917194501dcf6656dc758926a" args="" -->
@@ -129,13 +134,15 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>err_d2_abs</b><
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19af93510464733a26aeb3501716378d"></a><!-- doxytag: member="MagicSquare::xref" ref="a19af93510464733a26aeb3501716378d" args="" -->
 static <a class="el" href="structMagicSquare_1_1XRef.html">XRef</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>xref</b></td></tr>
 </table>
-<hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a23b9fe6d1e267d66847e8bcb2b575738"></a><!-- doxytag: member="MagicSquare::Check_Solution" ref="a23b9fe6d1e267d66847e8bcb2b575738" args="(AdData *p_ad)" -->
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>Magic Square benchmark. </p>
+</div><hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a8370790cee1a866ef1e1cead34f2fb69"></a><!-- doxytag: member="MagicSquare::checkSolution" ref="a8370790cee1a866ef1e1cead34f2fb69" args="(AdData *p_ad)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classMagicSquare.html#a23b9fe6d1e267d66847e8bcb2b575738">MagicSquare::Check_Solution</a> </td>
+          <td class="memname">int <a class="el" href="classMagicSquare.html#a8370790cee1a866ef1e1cead34f2fb69">MagicSquare::checkSolution</a> </td>
           <td>(</td>
           <td class="paramtype">AdData *&#160;</td>
           <td class="paramname"><em>p_ad</em></td><td>)</td>
@@ -156,15 +163,15 @@ static <a class="el" href="structMagicSquare_1_1XRef.html">XRef</a> *&#160;</td>
 
 </div>
 </div>
-<a class="anchor" id="a349868bc563431930a695795e8de84ed"></a><!-- doxytag: member="MagicSquare::Cost_If_Swap" ref="a349868bc563431930a695795e8de84ed" args="(int current_cost, int k1, int k2)" -->
+<a class="anchor" id="a3904934cb8ef871455a57dd0dd9be7ea"></a><!-- doxytag: member="MagicSquare::costIfSwap" ref="a3904934cb8ef871455a57dd0dd9be7ea" args="(int currentCost, int k1, int k2)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classMagicSquare.html#a349868bc563431930a695795e8de84ed">MagicSquare::Cost_If_Swap</a> </td>
+          <td class="memname">int <a class="el" href="classMagicSquare.html#a3904934cb8ef871455a57dd0dd9be7ea">MagicSquare::costIfSwap</a> </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>current_cost</em>, </td>
+          <td class="paramname"><em>currentCost</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -190,34 +197,36 @@ static <a class="el" href="structMagicSquare_1_1XRef.html">XRef</a> *&#160;</td>
 <p>Computes the cost if we swap k1 and k2. No swaps are recorded. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">current_cost,:</td><td>the current cost when this function is called. </td></tr>
+    <tr><td class="paramname">currentCost,:</td><td>the current cost when this function is called. </td></tr>
     <tr><td class="paramname">i</td><td>and j, the variables with which we simulate a swap to compute the resulting cost. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The cost if we swap variables i and j. </dd></dl>
 
+<p>Reimplemented from <a class="el" href="classBench.html#a5d88ce438e5ff9259f872bdcfe86621e">Bench</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="a7e45a2e9c128850bfb6717613a014fff"></a><!-- doxytag: member="MagicSquare::Cost_Of_Solution" ref="a7e45a2e9c128850bfb6717613a014fff" args="(int should_be_recorded)" -->
+<a class="anchor" id="a8c4a080666b26014b9ed1d8fc8a97470"></a><!-- doxytag: member="MagicSquare::costOfSolution" ref="a8c4a080666b26014b9ed1d8fc8a97470" args="(int shouldBeRecorded)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classMagicSquare.html#a7e45a2e9c128850bfb6717613a014fff">MagicSquare::Cost_Of_Solution</a> </td>
+          <td class="memname">int <a class="el" href="classMagicSquare.html#a8c4a080666b26014b9ed1d8fc8a97470">MagicSquare::costOfSolution</a> </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>should_be_recorded</em></td><td>)</td>
+          <td class="paramname"><em>shouldBeRecorded</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Computes the total cost of the current solution. Also computes errors on constraints for subsequent calls to Cost_On_Variable, Cost_If_Swap and Executed_Swap. </p>
+<p>Computes the total cost of the current solution. Also computes errors on constraints for subsequent calls to costOnVariable, costIfSwap and executedSwap. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">should_be_recorded,:</td><td>dummy input. </td></tr>
+    <tr><td class="paramname">shouldBeRecorded,:</td><td>dummy input. </td></tr>
   </table>
   </dd>
 </dl>
@@ -225,12 +234,12 @@ static <a class="el" href="structMagicSquare_1_1XRef.html">XRef</a> *&#160;</td>
 
 </div>
 </div>
-<a class="anchor" id="ae7ededec4689d278c83dc833c3a4b248"></a><!-- doxytag: member="MagicSquare::Cost_On_Variable" ref="ae7ededec4689d278c83dc833c3a4b248" args="(int k)" -->
+<a class="anchor" id="ae57a2b1183f82870cdd63fddeeb078fe"></a><!-- doxytag: member="MagicSquare::costOnVariable" ref="ae57a2b1183f82870cdd63fddeeb078fe" args="(int k)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classMagicSquare.html#ae7ededec4689d278c83dc833c3a4b248">MagicSquare::Cost_On_Variable</a> </td>
+          <td class="memname">int <a class="el" href="classMagicSquare.html#ae57a2b1183f82870cdd63fddeeb078fe">MagicSquare::costOnVariable</a> </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>k</em></td><td>)</td>
@@ -249,14 +258,16 @@ static <a class="el" href="structMagicSquare_1_1XRef.html">XRef</a> *&#160;</td>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The cost projected on variable k. </dd></dl>
 
+<p>Reimplemented from <a class="el" href="classBench.html#af27d153047259b80af7b556c0bfdadab">Bench</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="a4764e5e4485406f07f09c13307780757"></a><!-- doxytag: member="MagicSquare::Executed_Swap" ref="a4764e5e4485406f07f09c13307780757" args="(int k1, int k2)" -->
+<a class="anchor" id="a63c7d1ad48a11ff2e2b1889ae883cc0d"></a><!-- doxytag: member="MagicSquare::executedSwap" ref="a63c7d1ad48a11ff2e2b1889ae883cc0d" args="(int k1, int k2)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classMagicSquare.html#a4764e5e4485406f07f09c13307780757">MagicSquare::Executed_Swap</a> </td>
+          <td class="memname">void <a class="el" href="classMagicSquare.html#a63c7d1ad48a11ff2e2b1889ae883cc0d">MagicSquare::executedSwap</a> </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>k1</em>, </td>
@@ -284,14 +295,16 @@ static <a class="el" href="structMagicSquare_1_1XRef.html">XRef</a> *&#160;</td>
   </dd>
 </dl>
 
+<p>Reimplemented from <a class="el" href="classBench.html#a0985e6c65a50742c898dd717dce2294c">Bench</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="a21aa228edea478e4240fb3c27024f670"></a><!-- doxytag: member="MagicSquare::Init_Parameters" ref="a21aa228edea478e4240fb3c27024f670" args="(AdData *p_ad)" -->
+<a class="anchor" id="a822df6377b8511394629d796ab8bb690"></a><!-- doxytag: member="MagicSquare::initParameters" ref="a822df6377b8511394629d796ab8bb690" args="(AdData *p_ad)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classMagicSquare.html#a21aa228edea478e4240fb3c27024f670">MagicSquare::Init_Parameters</a> </td>
+          <td class="memname">void <a class="el" href="classMagicSquare.html#a822df6377b8511394629d796ab8bb690">MagicSquare::initParameters</a> </td>
           <td>(</td>
           <td class="paramtype">AdData *&#160;</td>
           <td class="paramname"><em>p_ad</em></td><td>)</td>
@@ -311,12 +324,12 @@ static <a class="el" href="structMagicSquare_1_1XRef.html">XRef</a> *&#160;</td>
 
 </div>
 </div>
-<a class="anchor" id="a3d43d7fa15f945e20491ec1125bd0d44"></a><!-- doxytag: member="MagicSquare::Solve" ref="a3d43d7fa15f945e20491ec1125bd0d44" args="(AdData *p_ad)" -->
+<a class="anchor" id="a78393622fa3f92fe35d1dd0e97e3c0df"></a><!-- doxytag: member="MagicSquare::solve" ref="a78393622fa3f92fe35d1dd0e97e3c0df" args="(AdData *p_ad)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classMagicSquare.html#a3d43d7fa15f945e20491ec1125bd0d44">MagicSquare::Solve</a> </td>
+          <td class="memname">void <a class="el" href="classMagicSquare.html#a78393622fa3f92fe35d1dd0e97e3c0df">MagicSquare::solve</a> </td>
           <td>(</td>
           <td class="paramtype">AdData *&#160;</td>
           <td class="paramname"><em>p_ad</em></td><td>)</td>
@@ -337,7 +350,7 @@ static <a class="el" href="structMagicSquare_1_1XRef.html">XRef</a> *&#160;</td>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="magic__square_8h_source.html">magic_square.h</a></li>
+<li><a class="el" href="magic__square_8hpp_source.html">magic_square.hpp</a></li>
 <li><a class="el" href="magic__square_8cpp.html">magic_square.cpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -358,7 +371,7 @@ static <a class="el" href="structMagicSquare_1_1XRef.html">XRef</a> *&#160;</td>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 21 2013 16:09:08 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 21 2013 16:52:26 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

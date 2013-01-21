@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['solve',['Solve',['../classMagicSquare.html#a3d43d7fa15f945e20491ec1125bd0d44',1,'MagicSquare']]]
+  ['solve',['solve',['../classMagicSquare.html#a78393622fa3f92fe35d1dd0e97e3c0df',1,'MagicSquare']]]
 ];
