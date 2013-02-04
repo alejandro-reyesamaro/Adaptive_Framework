@@ -1,5 +1,8 @@
 var searchData=
 [
+  ['data32',['data32',['../classAdData.html#a165ab98a7a4c0fc157e15ae5a9e42b7e',1,'AdData']]],
+  ['data64',['data64',['../classAdData.html#a79473c252c6e58b72813a6843dd1d815',1,'AdData']]],
+  ['debug',['debug',['../classAdData.html#afeb196198499026a227948b01f5d6676',1,'AdData']]],
   ['default_5fcost_5fswap_2ecpp',['default_cost_swap.cpp',['../default__cost__swap_8cpp.html',1,'']]],
   ['default_5fcost_5fswap_2ehpp',['default_cost_swap.hpp',['../default__cost__swap_8hpp.html',1,'']]],
   ['default_5fcost_5fvar_2ecpp',['default_cost_var.cpp',['../default__cost__var_8cpp.html',1,'']]],
@@ -21,5 +24,6 @@ var searchData=
   ['defaultnexti',['DefaultNextI',['../classDefaultNextI.html',1,'']]],
   ['defaultnextj',['DefaultNextJ',['../classDefaultNextJ.html',1,'']]],
   ['defaultreset',['DefaultReset',['../classDefaultReset.html',1,'']]],
-  ['displaysolution',['displaySolution',['../classBench.html#a8f1d5b7a37082ec2f2bb15b9e3820c96',1,'Bench::displaySolution()'],['../classDefaultDisplaySol.html#ab80dde5db4b38e88dba892c5cf94c777',1,'DefaultDisplaySol::displaySolution()'],['../classStrategyDisplaySol.html#aa4d70248e3281b868beb92875c8503c5',1,'StrategyDisplaySol::displaySolution()']]]
+  ['displaysolution',['displaySolution',['../classBench.html#a8f1d5b7a37082ec2f2bb15b9e3820c96',1,'Bench::displaySolution()'],['../classDefaultDisplaySol.html#ab80dde5db4b38e88dba892c5cf94c777',1,'DefaultDisplaySol::displaySolution()'],['../classStrategyDisplaySol.html#aa4d70248e3281b868beb92875c8503c5',1,'StrategyDisplaySol::displaySolution()']]],
+  ['do_5fnot_5finit',['do_not_init',['../classAdData.html#a988620949ce258a678030e920ef1d924',1,'AdData']]]
 ];

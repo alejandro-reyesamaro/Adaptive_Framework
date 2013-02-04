@@ -1,5 +1,10 @@
 var searchData=
 [
+  ['seed',['seed',['../classAdData.html#ad9a435db71511ecf195e7903f16db966',1,'AdData']]],
+  ['size',['size',['../classAdData.html#a510cbe13195442be22c03caee16d19a9',1,'AdData']]],
+  ['size_5fin_5fbytes',['size_in_bytes',['../classAdData.html#a604888715fe344ae4a3331de9283a021',1,'AdData']]],
+  ['size_5fmessage',['size_message',['../classAdDataParallel.html#a5ecf007c3aa55587262e26277f57bdf3',1,'AdDataParallel']]],
+  ['sol',['sol',['../classAdData.html#a0b104c9abf7d64d2bbeb330dd237fd92',1,'AdData']]],
   ['solve',['solve',['../classMagicSquare.html#a78393622fa3f92fe35d1dd0e97e3c0df',1,'MagicSquare']]],
   ['strategy_5fcost_5fswap_2ehpp',['strategy_cost_swap.hpp',['../strategy__cost__swap_8hpp.html',1,'']]],
   ['strategy_5fcost_5fvar_2ehpp',['strategy_cost_var.hpp',['../strategy__cost__var_8hpp.html',1,'']]],

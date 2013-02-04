@@ -14,5 +14,10 @@
 class FactoryData
 {
 public:
+  /**
+   * \fn	AdData createData()
+   * \brief	Pure virtual function to instantiate and return the correct struture AdData (sequential or parallel).
+   * \return	The instantiated structure AdData.
+   */
   AdData createData() = 0;
 };
