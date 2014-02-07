@@ -1,0 +1,58 @@
+\hypertarget{classStrategyReset}{\section{\-Strategy\-Reset \-Class \-Reference}
+\label{classStrategyReset}\index{\-Strategy\-Reset@{\-Strategy\-Reset}}
+}
+
+
+\-Strategy \-Pattern to perform a reset.  
+
+
+
+
+{\ttfamily \#include $<$strategy\-\_\-reset.\-hpp$>$}
+
+\-Inheritance diagram for \-Strategy\-Reset\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classStrategyReset}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \hyperlink{classStrategyReset_af6cedf730c45825c61390455bd6f90a4}{reset} (int n, \hyperlink{classAdData}{\-Ad\-Data} $\ast$p\-\_\-ad)=0
+\begin{DoxyCompactList}\small\item\em \-Virtual wrapper when user function reset is not defined. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Strategy \-Pattern to perform a reset. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classStrategyReset_af6cedf730c45825c61390455bd6f90a4}{\index{\-Strategy\-Reset@{\-Strategy\-Reset}!reset@{reset}}
+\index{reset@{reset}!StrategyReset@{\-Strategy\-Reset}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Strategy\-Reset\-::reset} (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{{\bf \-Ad\-Data} $\ast$}]{p\-\_\-ad}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{classStrategyReset_af6cedf730c45825c61390455bd6f90a4}
+
+
+\-Virtual wrapper when user function reset is not defined. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em n,\-:} & number of reset loop to perform. p\-\_\-ad\-: pointer toward the configuration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The new cost, or -\/1 if unknown. 
+\end{DoxyReturn}
+
+
+\-Implemented in \hyperlink{classDefaultReset_a82e58336172b51b8a8ce0369cbfd0a55}{\-Default\-Reset}.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{strategy__reset_8hpp}{strategy\-\_\-reset.\-hpp}\end{DoxyCompactItemize}

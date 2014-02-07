@@ -1,0 +1,58 @@
+\hypertarget{classStrategyNextJ}{\section{\-Strategy\-Next\-J \-Class \-Reference}
+\label{classStrategyNextJ}\index{\-Strategy\-Next\-J@{\-Strategy\-Next\-J}}
+}
+
+
+\-Strategy \-Pattern to return the next j (value) to consider, given i (variable)  
+
+
+
+
+{\ttfamily \#include $<$strategy\-\_\-next\-\_\-j.\-hpp$>$}
+
+\-Inheritance diagram for \-Strategy\-Next\-J\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classStrategyNextJ}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \hyperlink{classStrategyNextJ_ab566c4e5827240b575d0e7445b7ba695}{next\-J} (int i, int j)=0
+\begin{DoxyCompactList}\small\item\em \-Virtual wrapper when user function next\-J is not defined. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Strategy \-Pattern to return the next j (value) to consider, given i (variable) 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classStrategyNextJ_ab566c4e5827240b575d0e7445b7ba695}{\index{\-Strategy\-Next\-J@{\-Strategy\-Next\-J}!next\-J@{next\-J}}
+\index{next\-J@{next\-J}!StrategyNextJ@{\-Strategy\-Next\-J}}
+\subsubsection[{next\-J}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Strategy\-Next\-J\-::next\-J} (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{classStrategyNextJ_ab566c4e5827240b575d0e7445b7ba695}
+
+
+\-Virtual wrapper when user function next\-J is not defined. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em i} & and j\-: two variables. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The next j-\/variable (j+1), unless j $<$ 0 (then returns i+1) 
+\end{DoxyReturn}
+
+
+\-Implemented in \hyperlink{classDefaultNextJ_af3449e182609f056189cc1a22af0dd67}{\-Default\-Next\-J}.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{strategy__next__j_8hpp}{strategy\-\_\-next\-\_\-j.\-hpp}\end{DoxyCompactItemize}
