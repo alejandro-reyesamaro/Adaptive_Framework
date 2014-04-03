@@ -79,81 +79,79 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="ad__data_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*</span>
-<a name="l00002"></a>00002 <span class="comment"> * Adaptive search C++ is an C++ implementation of the </span>
-<a name="l00003"></a>00003 <span class="comment"> * Adaptive search algorithm </span>
-<a name="l00004"></a>00004 <span class="comment"> * (see Codognet and Diaz 2001, http://dl.acm.org/citation.cfm?id=668485).</span>
-<a name="l00005"></a>00005 <span class="comment"> * Please visit https://github.com/richoux/Adaptive_Search_Cpp </span>
-<a name="l00006"></a>00006 <span class="comment"> * for further information.</span>
-<a name="l00007"></a>00007 <span class="comment"> * </span>
-<a name="l00008"></a>00008 <span class="comment"> * Copyright (C) 2013-2014 Florian Richoux</span>
-<a name="l00009"></a>00009 <span class="comment"> *</span>
-<a name="l00010"></a>00010 <span class="comment"> * This file is part of Adaptive search C++.</span>
-<a name="l00011"></a>00011 <span class="comment"> * Adaptive search C++ is free software: you can redistribute it and/or modify</span>
-<a name="l00012"></a>00012 <span class="comment"> * it under the terms of the GNU General Public License as published by</span>
-<a name="l00013"></a>00013 <span class="comment"> * the Free Software Foundation, either version 3 of the License, or</span>
-<a name="l00014"></a>00014 <span class="comment"> * (at your option) any later version.</span>
-<a name="l00015"></a>00015 <span class="comment"></span>
-<a name="l00016"></a>00016 <span class="comment"> * Adaptive search C++ is distributed in the hope that it will be useful,</span>
-<a name="l00017"></a>00017 <span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
-<a name="l00018"></a>00018 <span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
-<a name="l00019"></a>00019 <span class="comment"> * GNU General Public License for more details.</span>
-<a name="l00020"></a>00020 <span class="comment"></span>
-<a name="l00021"></a>00021 <span class="comment"> * You should have received a copy of the GNU General Public License</span>
-<a name="l00022"></a>00022 <span class="comment"> * along with  Adaptive search C++. If not, see http://www.gnu.org/licenses/.</span>
-<a name="l00023"></a>00023 <span class="comment"> */</span>
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025 
-<a name="l00039"></a><a class="code" href="classAdData.html">00039</a> <span class="keyword">class </span><a class="code" href="classAdData.html" title="Main data structure.">AdData</a>
-<a name="l00040"></a>00040 {
-<a name="l00041"></a>00041 <span class="keyword">public</span>:
-<a name="l00042"></a>00042                                 <span class="comment">/* --- input: basic data --- */</span>
-<a name="l00043"></a>00043 
-<a name="l00044"></a><a class="code" href="classAdData.html#a510cbe13195442be22c03caee16d19a9">00044</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a510cbe13195442be22c03caee16d19a9">size</a>;                     
-<a name="l00045"></a><a class="code" href="classAdData.html#a988620949ce258a678030e920ef1d924">00045</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a988620949ce258a678030e920ef1d924">do_not_init</a>;              
-<a name="l00046"></a><a class="code" href="classAdData.html#aa07e6b6e9c15152e0efa6f3b1e5e6934">00046</a>   <span class="keywordtype">int</span> *<a class="code" href="classAdData.html#aa07e6b6e9c15152e0efa6f3b1e5e6934">actual_value</a>;            
-<a name="l00047"></a><a class="code" href="classAdData.html#a156da702ebf4837590f4854dc7c2bc81">00047</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a156da702ebf4837590f4854dc7c2bc81">base_value</a>;               
-<a name="l00048"></a><a class="code" href="classAdData.html#afeb196198499026a227948b01f5d6676">00048</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#afeb196198499026a227948b01f5d6676">debug</a>;                    
-<a name="l00049"></a><a class="code" href="classAdData.html#a9c23c8706e4564395bb087d08e05f1f0">00049</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a9c23c8706e4564395bb087d08e05f1f0">break_nl</a>;                 
-<a name="l00050"></a><a class="code" href="classAdData.html#ad143f3006862ac20445480279ecc119b">00050</a>   <span class="keywordtype">char</span> *<a class="code" href="classAdData.html#ad143f3006862ac20445480279ecc119b">log_file</a>;               
-<a name="l00052"></a>00052                                 <span class="comment">/* --- input: tuning parameters --- */</span>
-<a name="l00053"></a>00053 
-<a name="l00054"></a><a class="code" href="classAdData.html#aaa20f10e31a32e68a8ba89ba6cb45418">00054</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#aaa20f10e31a32e68a8ba89ba6cb45418">exhaustive</a>;               
-<a name="l00055"></a><a class="code" href="classAdData.html#a90287e9e24c3283b02afa11547fd09a8">00055</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a90287e9e24c3283b02afa11547fd09a8">first_best</a>;               
-<a name="l00056"></a><a class="code" href="classAdData.html#ae3faabad700f63af17109c86e844a479">00056</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#ae3faabad700f63af17109c86e844a479">prob_select_loc_min</a>;      
-<a name="l00057"></a><a class="code" href="classAdData.html#a56f6a4d4c38156e5583502dec2b84d98">00057</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a56f6a4d4c38156e5583502dec2b84d98">freeze_loc_min</a>;           
-<a name="l00058"></a><a class="code" href="classAdData.html#a81ecb44f370042dbc83a2fe0d55a8919">00058</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a81ecb44f370042dbc83a2fe0d55a8919">freeze_swap</a>;              
-<a name="l00059"></a><a class="code" href="classAdData.html#ad412ba14ea9c314cb3628f1f370d3857">00059</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#ad412ba14ea9c314cb3628f1f370d3857">reset_limit</a>;              
-<a name="l00060"></a><a class="code" href="classAdData.html#a060111a11c54ed717c9669a5baa61cdb">00060</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a060111a11c54ed717c9669a5baa61cdb">nb_var_to_reset</a>;          
-<a name="l00061"></a><a class="code" href="classAdData.html#a58c6bec33a86d9151b9830f604244211">00061</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a58c6bec33a86d9151b9830f604244211">restart_limit</a>;            
-<a name="l00062"></a><a class="code" href="classAdData.html#a1dbcbad666cf9f7fa881706082cb70a7">00062</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a1dbcbad666cf9f7fa881706082cb70a7">restart_max</a>;              
-<a name="l00063"></a><a class="code" href="classAdData.html#a0a5bced280616c57eeaf20d78eabd538">00063</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a0a5bced280616c57eeaf20d78eabd538">reinit_after_if_swap</a>;     
-<a name="l00065"></a>00065                                 <span class="comment">/* --- input / output: solution --- */</span>
-<a name="l00066"></a>00066 
-<a name="l00067"></a><a class="code" href="classAdData.html#a0b104c9abf7d64d2bbeb330dd237fd92">00067</a>   <span class="keywordtype">int</span> *<a class="code" href="classAdData.html#a0b104c9abf7d64d2bbeb330dd237fd92">sol</a>;                     
-<a name="l00068"></a><a class="code" href="classAdData.html#a604888715fe344ae4a3331de9283a021">00068</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a604888715fe344ae4a3331de9283a021">size_in_bytes</a>;            
-<a name="l00070"></a>00070                                 <span class="comment">/* --- output: info / counters --- */</span>
-<a name="l00071"></a>00071 
-<a name="l00072"></a><a class="code" href="classAdData.html#aac016a9f725d10bdcc414d089a493b6e">00072</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#aac016a9f725d10bdcc414d089a493b6e">total_cost</a>;               
-<a name="l00073"></a><a class="code" href="classAdData.html#a1b4d75a8af404b120559b52ac2a387b9">00073</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a1b4d75a8af404b120559b52ac2a387b9">nb_restart</a>;               
-<a name="l00075"></a><a class="code" href="classAdData.html#a45ba53841157b7dbf71efd8b39e2da1c">00075</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a45ba53841157b7dbf71efd8b39e2da1c">nb_iter</a>;                  
-<a name="l00076"></a><a class="code" href="classAdData.html#afb68c8b81015411d7cf17bf94328b139">00076</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#afb68c8b81015411d7cf17bf94328b139">nb_swap</a>;                  
-<a name="l00077"></a><a class="code" href="classAdData.html#a3f98aa5205fb59c2f8ac70be9626c57c">00077</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a3f98aa5205fb59c2f8ac70be9626c57c">nb_same_var</a>;              
-<a name="l00078"></a><a class="code" href="classAdData.html#a1c64449d7cdeee22d68aa719d3249908">00078</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a1c64449d7cdeee22d68aa719d3249908">nb_reset</a>;                 
-<a name="l00079"></a><a class="code" href="classAdData.html#a1f285bdad8c77fd7d030456571eb413b">00079</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a1f285bdad8c77fd7d030456571eb413b">nb_local_min</a>;             
-<a name="l00082"></a><a class="code" href="classAdData.html#a8912ef6d4f9041a6ccf8a5e2f2ca8789">00082</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a8912ef6d4f9041a6ccf8a5e2f2ca8789">nb_iter_tot</a>;              
-<a name="l00083"></a><a class="code" href="classAdData.html#a364283936f3917339829cbd86922699c">00083</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a364283936f3917339829cbd86922699c">nb_swap_tot</a>;              
-<a name="l00084"></a><a class="code" href="classAdData.html#a79a1aef4b701433f246d5cdc1edc1a0e">00084</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a79a1aef4b701433f246d5cdc1edc1a0e">nb_same_var_tot</a>;          
-<a name="l00085"></a><a class="code" href="classAdData.html#a55bfd4eb00c611fdc673d09630bba694">00085</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a55bfd4eb00c611fdc673d09630bba694">nb_reset_tot</a>;             
-<a name="l00086"></a><a class="code" href="classAdData.html#aee345de54ad3dacf05875ec8a5e64114">00086</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#aee345de54ad3dacf05875ec8a5e64114">nb_local_min_tot</a>;         
-<a name="l00089"></a>00089                                         <span class="comment">/* --- other values (e.g. from main) not used by the solver engine --- */</span>
-<a name="l00090"></a>00090 
-<a name="l00091"></a><a class="code" href="classAdData.html#a99e1f7b94c3bbcca45f638dd5eb92d1c">00091</a>   <span class="keywordtype">int</span>           <a class="code" href="classAdData.html#a99e1f7b94c3bbcca45f638dd5eb92d1c">param</a>;                  
-<a name="l00092"></a><a class="code" href="classAdData.html#a465cda10034a2565c78a565db79b1a45">00092</a>   <span class="keywordtype">char</span>          <a class="code" href="classAdData.html#a465cda10034a2565c78a565db79b1a45">param_file</a>[512];        
-<a name="l00093"></a><a class="code" href="classAdData.html#ad9a435db71511ecf195e7903f16db966">00093</a>   <span class="keywordtype">int</span>           <a class="code" href="classAdData.html#ad9a435db71511ecf195e7903f16db966">seed</a>;                   
-<a name="l00094"></a><a class="code" href="classAdData.html#a8a6886ff5569b524eaacd83bdc963cd1">00094</a>   <span class="keywordtype">int</span>           <a class="code" href="classAdData.html#a8a6886ff5569b524eaacd83bdc963cd1">reset_percent</a>;          
-<a name="l00095"></a><a class="code" href="classAdData.html#a165ab98a7a4c0fc157e15ae5a9e42b7e">00095</a>   <span class="keywordtype">int</span>           <a class="code" href="classAdData.html#a165ab98a7a4c0fc157e15ae5a9e42b7e">data32</a>[4];              
-<a name="l00096"></a><a class="code" href="classAdData.html#a79473c252c6e58b72813a6843dd1d815">00096</a>   <span class="keywordtype">long</span> <span class="keywordtype">long</span>     <a class="code" href="classAdData.html#a79473c252c6e58b72813a6843dd1d815">data64</a>[2];              
-<a name="l00097"></a>00097 };
+<a name="l00002"></a>00002 <span class="comment"> * Adaptive Framework is a C++ metaheuristics framework.</span>
+<a name="l00003"></a>00003 <span class="comment"> * Please visit https://github.com/richoux/Adaptive_Framework </span>
+<a name="l00004"></a>00004 <span class="comment"> * for further information.</span>
+<a name="l00005"></a>00005 <span class="comment"> * </span>
+<a name="l00006"></a>00006 <span class="comment"> * Copyright (C) 2013-2014 Florian Richoux</span>
+<a name="l00007"></a>00007 <span class="comment"> *</span>
+<a name="l00008"></a>00008 <span class="comment"> * This file is part of Adaptive Framework.</span>
+<a name="l00009"></a>00009 <span class="comment"> * Adaptive Framework is free software: you can redistribute it and/or </span>
+<a name="l00010"></a>00010 <span class="comment"> * modify it under the terms of the GNU General Public License as published </span>
+<a name="l00011"></a>00011 <span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span>
+<a name="l00012"></a>00012 <span class="comment"> * (at your option) any later version.</span>
+<a name="l00013"></a>00013 <span class="comment"></span>
+<a name="l00014"></a>00014 <span class="comment"> * Adaptive Framework is distributed in the hope that it will be useful,</span>
+<a name="l00015"></a>00015 <span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<a name="l00016"></a>00016 <span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<a name="l00017"></a>00017 <span class="comment"> * GNU General Public License for more details.</span>
+<a name="l00018"></a>00018 <span class="comment"></span>
+<a name="l00019"></a>00019 <span class="comment"> * You should have received a copy of the GNU General Public License</span>
+<a name="l00020"></a>00020 <span class="comment"> * along with  Adaptive Framework. If not, see http://www.gnu.org/licenses/.</span>
+<a name="l00021"></a>00021 <span class="comment"> */</span>
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023 
+<a name="l00037"></a><a class="code" href="classAdData.html">00037</a> <span class="keyword">class </span><a class="code" href="classAdData.html" title="Main data structure.">AdData</a>
+<a name="l00038"></a>00038 {
+<a name="l00039"></a>00039 <span class="keyword">public</span>:
+<a name="l00040"></a>00040                                 <span class="comment">/* --- input: basic data --- */</span>
+<a name="l00041"></a>00041 
+<a name="l00042"></a><a class="code" href="classAdData.html#a510cbe13195442be22c03caee16d19a9">00042</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a510cbe13195442be22c03caee16d19a9">size</a>;                     
+<a name="l00043"></a><a class="code" href="classAdData.html#a988620949ce258a678030e920ef1d924">00043</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a988620949ce258a678030e920ef1d924">do_not_init</a>;              
+<a name="l00044"></a><a class="code" href="classAdData.html#aa07e6b6e9c15152e0efa6f3b1e5e6934">00044</a>   <span class="keywordtype">int</span> *<a class="code" href="classAdData.html#aa07e6b6e9c15152e0efa6f3b1e5e6934">actual_value</a>;            
+<a name="l00045"></a><a class="code" href="classAdData.html#a156da702ebf4837590f4854dc7c2bc81">00045</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a156da702ebf4837590f4854dc7c2bc81">base_value</a>;               
+<a name="l00046"></a><a class="code" href="classAdData.html#afeb196198499026a227948b01f5d6676">00046</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#afeb196198499026a227948b01f5d6676">debug</a>;                    
+<a name="l00047"></a><a class="code" href="classAdData.html#a9c23c8706e4564395bb087d08e05f1f0">00047</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a9c23c8706e4564395bb087d08e05f1f0">break_nl</a>;                 
+<a name="l00048"></a><a class="code" href="classAdData.html#ad143f3006862ac20445480279ecc119b">00048</a>   <span class="keywordtype">char</span> *<a class="code" href="classAdData.html#ad143f3006862ac20445480279ecc119b">log_file</a>;               
+<a name="l00050"></a>00050                                 <span class="comment">/* --- input: tuning parameters --- */</span>
+<a name="l00051"></a>00051 
+<a name="l00052"></a><a class="code" href="classAdData.html#aaa20f10e31a32e68a8ba89ba6cb45418">00052</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#aaa20f10e31a32e68a8ba89ba6cb45418">exhaustive</a>;               
+<a name="l00053"></a><a class="code" href="classAdData.html#a90287e9e24c3283b02afa11547fd09a8">00053</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a90287e9e24c3283b02afa11547fd09a8">first_best</a>;               
+<a name="l00054"></a><a class="code" href="classAdData.html#ae3faabad700f63af17109c86e844a479">00054</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#ae3faabad700f63af17109c86e844a479">prob_select_loc_min</a>;      
+<a name="l00055"></a><a class="code" href="classAdData.html#a56f6a4d4c38156e5583502dec2b84d98">00055</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a56f6a4d4c38156e5583502dec2b84d98">freeze_loc_min</a>;           
+<a name="l00056"></a><a class="code" href="classAdData.html#a81ecb44f370042dbc83a2fe0d55a8919">00056</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a81ecb44f370042dbc83a2fe0d55a8919">freeze_swap</a>;              
+<a name="l00057"></a><a class="code" href="classAdData.html#ad412ba14ea9c314cb3628f1f370d3857">00057</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#ad412ba14ea9c314cb3628f1f370d3857">reset_limit</a>;              
+<a name="l00058"></a><a class="code" href="classAdData.html#a060111a11c54ed717c9669a5baa61cdb">00058</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a060111a11c54ed717c9669a5baa61cdb">nb_var_to_reset</a>;          
+<a name="l00059"></a><a class="code" href="classAdData.html#a58c6bec33a86d9151b9830f604244211">00059</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a58c6bec33a86d9151b9830f604244211">restart_limit</a>;            
+<a name="l00060"></a><a class="code" href="classAdData.html#a1dbcbad666cf9f7fa881706082cb70a7">00060</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a1dbcbad666cf9f7fa881706082cb70a7">restart_max</a>;              
+<a name="l00061"></a><a class="code" href="classAdData.html#a0a5bced280616c57eeaf20d78eabd538">00061</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a0a5bced280616c57eeaf20d78eabd538">reinit_after_if_swap</a>;     
+<a name="l00063"></a>00063                                 <span class="comment">/* --- input / output: solution --- */</span>
+<a name="l00064"></a>00064 
+<a name="l00065"></a><a class="code" href="classAdData.html#a0b104c9abf7d64d2bbeb330dd237fd92">00065</a>   <span class="keywordtype">int</span> *<a class="code" href="classAdData.html#a0b104c9abf7d64d2bbeb330dd237fd92">sol</a>;                     
+<a name="l00066"></a><a class="code" href="classAdData.html#a604888715fe344ae4a3331de9283a021">00066</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a604888715fe344ae4a3331de9283a021">size_in_bytes</a>;            
+<a name="l00068"></a>00068                                 <span class="comment">/* --- output: info / counters --- */</span>
+<a name="l00069"></a>00069 
+<a name="l00070"></a><a class="code" href="classAdData.html#aac016a9f725d10bdcc414d089a493b6e">00070</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#aac016a9f725d10bdcc414d089a493b6e">total_cost</a>;               
+<a name="l00071"></a><a class="code" href="classAdData.html#a1b4d75a8af404b120559b52ac2a387b9">00071</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a1b4d75a8af404b120559b52ac2a387b9">nb_restart</a>;               
+<a name="l00073"></a><a class="code" href="classAdData.html#a45ba53841157b7dbf71efd8b39e2da1c">00073</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a45ba53841157b7dbf71efd8b39e2da1c">nb_iter</a>;                  
+<a name="l00074"></a><a class="code" href="classAdData.html#afb68c8b81015411d7cf17bf94328b139">00074</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#afb68c8b81015411d7cf17bf94328b139">nb_swap</a>;                  
+<a name="l00075"></a><a class="code" href="classAdData.html#a3f98aa5205fb59c2f8ac70be9626c57c">00075</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a3f98aa5205fb59c2f8ac70be9626c57c">nb_same_var</a>;              
+<a name="l00076"></a><a class="code" href="classAdData.html#a1c64449d7cdeee22d68aa719d3249908">00076</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a1c64449d7cdeee22d68aa719d3249908">nb_reset</a>;                 
+<a name="l00077"></a><a class="code" href="classAdData.html#a1f285bdad8c77fd7d030456571eb413b">00077</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a1f285bdad8c77fd7d030456571eb413b">nb_local_min</a>;             
+<a name="l00080"></a><a class="code" href="classAdData.html#a8912ef6d4f9041a6ccf8a5e2f2ca8789">00080</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a8912ef6d4f9041a6ccf8a5e2f2ca8789">nb_iter_tot</a>;              
+<a name="l00081"></a><a class="code" href="classAdData.html#a364283936f3917339829cbd86922699c">00081</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a364283936f3917339829cbd86922699c">nb_swap_tot</a>;              
+<a name="l00082"></a><a class="code" href="classAdData.html#a79a1aef4b701433f246d5cdc1edc1a0e">00082</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a79a1aef4b701433f246d5cdc1edc1a0e">nb_same_var_tot</a>;          
+<a name="l00083"></a><a class="code" href="classAdData.html#a55bfd4eb00c611fdc673d09630bba694">00083</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#a55bfd4eb00c611fdc673d09630bba694">nb_reset_tot</a>;             
+<a name="l00084"></a><a class="code" href="classAdData.html#aee345de54ad3dacf05875ec8a5e64114">00084</a>   <span class="keywordtype">int</span> <a class="code" href="classAdData.html#aee345de54ad3dacf05875ec8a5e64114">nb_local_min_tot</a>;         
+<a name="l00087"></a>00087                                         <span class="comment">/* --- other values (e.g. from main) not used by the solver engine --- */</span>
+<a name="l00088"></a>00088 
+<a name="l00089"></a><a class="code" href="classAdData.html#a99e1f7b94c3bbcca45f638dd5eb92d1c">00089</a>   <span class="keywordtype">int</span>           <a class="code" href="classAdData.html#a99e1f7b94c3bbcca45f638dd5eb92d1c">param</a>;                  
+<a name="l00090"></a><a class="code" href="classAdData.html#a465cda10034a2565c78a565db79b1a45">00090</a>   <span class="keywordtype">char</span>          <a class="code" href="classAdData.html#a465cda10034a2565c78a565db79b1a45">param_file</a>[512];        
+<a name="l00091"></a><a class="code" href="classAdData.html#ad9a435db71511ecf195e7903f16db966">00091</a>   <span class="keywordtype">int</span>           <a class="code" href="classAdData.html#ad9a435db71511ecf195e7903f16db966">seed</a>;                   
+<a name="l00092"></a><a class="code" href="classAdData.html#a8a6886ff5569b524eaacd83bdc963cd1">00092</a>   <span class="keywordtype">int</span>           <a class="code" href="classAdData.html#a8a6886ff5569b524eaacd83bdc963cd1">reset_percent</a>;          
+<a name="l00093"></a><a class="code" href="classAdData.html#a165ab98a7a4c0fc157e15ae5a9e42b7e">00093</a>   <span class="keywordtype">int</span>           <a class="code" href="classAdData.html#a165ab98a7a4c0fc157e15ae5a9e42b7e">data32</a>[4];              
+<a name="l00094"></a><a class="code" href="classAdData.html#a79473c252c6e58b72813a6843dd1d815">00094</a>   <span class="keywordtype">long</span> <span class="keywordtype">long</span>     <a class="code" href="classAdData.html#a79473c252c6e58b72813a6843dd1d815">data64</a>[2];              
+<a name="l00095"></a>00095 };
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -172,7 +170,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 7 2014 16:51:15 for Adaptive Search C++ by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Apr 3 2014 13:35:03 for Adaptive Search C++ by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

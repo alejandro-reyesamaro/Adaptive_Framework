@@ -79,55 +79,53 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="bench_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*</span>
-<a name="l00002"></a>00002 <span class="comment"> * Adaptive search C++ is an C++ implementation of the </span>
-<a name="l00003"></a>00003 <span class="comment"> * Adaptive search algorithm </span>
-<a name="l00004"></a>00004 <span class="comment"> * (see Codognet and Diaz 2001, http://dl.acm.org/citation.cfm?id=668485).</span>
-<a name="l00005"></a>00005 <span class="comment"> * Please visit https://github.com/richoux/Adaptive_Search_Cpp </span>
-<a name="l00006"></a>00006 <span class="comment"> * for further information.</span>
-<a name="l00007"></a>00007 <span class="comment"> * </span>
-<a name="l00008"></a>00008 <span class="comment"> * Copyright (C) 2013-2014 Florian Richoux</span>
-<a name="l00009"></a>00009 <span class="comment"> *</span>
-<a name="l00010"></a>00010 <span class="comment"> * This file is part of Adaptive search C++.</span>
-<a name="l00011"></a>00011 <span class="comment"> * Adaptive search C++ is free software: you can redistribute it and/or modify</span>
-<a name="l00012"></a>00012 <span class="comment"> * it under the terms of the GNU General Public License as published by</span>
-<a name="l00013"></a>00013 <span class="comment"> * the Free Software Foundation, either version 3 of the License, or</span>
-<a name="l00014"></a>00014 <span class="comment"> * (at your option) any later version.</span>
-<a name="l00015"></a>00015 <span class="comment"></span>
-<a name="l00016"></a>00016 <span class="comment"> * Adaptive search C++ is distributed in the hope that it will be useful,</span>
-<a name="l00017"></a>00017 <span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
-<a name="l00018"></a>00018 <span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
-<a name="l00019"></a>00019 <span class="comment"> * GNU General Public License for more details.</span>
-<a name="l00020"></a>00020 <span class="comment"></span>
-<a name="l00021"></a>00021 <span class="comment"> * You should have received a copy of the GNU General Public License</span>
-<a name="l00022"></a>00022 <span class="comment"> * along with  Adaptive search C++. If not, see http://www.gnu.org/licenses/.</span>
-<a name="l00023"></a>00023 <span class="comment"> */</span>
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025 
-<a name="l00039"></a><a class="code" href="classBench.html">00039</a> <span class="keyword">class </span><a class="code" href="classBench.html" title="Benchmark mother class.">Bench</a>
-<a name="l00040"></a>00040 {
-<a name="l00041"></a>00041  <span class="keyword">public</span>:
-<a name="l00042"></a>00042 
-<a name="l00043"></a><a class="code" href="classBench.html#a27ed9ea3eb2b29027e79e31adf331d86">00043</a>   <a class="code" href="classStrategyCostSwap.html" title="Strategy Pattern to compute the cost of a swap.">StrategyCostSwap</a>      <a class="code" href="classBench.html#a27ed9ea3eb2b29027e79e31adf331d86">strategyCostSwap</a>;       
-<a name="l00045"></a><a class="code" href="classBench.html#a2ce57cda8198f6be72fd0ac045b06839">00045</a>   <a class="code" href="classStrategyCostVar.html" title="Strategy Pattern to compute the projected cost on a variable.">StrategyCostVar</a>       <a class="code" href="classBench.html#a2ce57cda8198f6be72fd0ac045b06839">strategyCostVar</a>;        
-<a name="l00048"></a><a class="code" href="classBench.html#a31569ae22eda31c68257050276fa6fee">00048</a>   <a class="code" href="classStrategyDisplaySol.html" title="Strategy Pattern to display the solution.">StrategyDisplaySol</a>    <a class="code" href="classBench.html#a31569ae22eda31c68257050276fa6fee">strategyDisplaySol</a>;     
-<a name="l00050"></a><a class="code" href="classBench.html#a8737cee0eb80295048068322c9a20359">00050</a>   <a class="code" href="classStrategyExecSwap.html" title="Strategy Pattern to execute a swap.">StrategyExecSwap</a>      <a class="code" href="classBench.html#a8737cee0eb80295048068322c9a20359">strategyExecSwap</a>;       
-<a name="l00052"></a><a class="code" href="classBench.html#af15b42b6084454f59cd63cf9968a2a5b">00052</a>   <a class="code" href="classStrategyNextI.html" title="Strategy Pattern to return the next i (variable) to consider.">StrategyNextI</a>         <a class="code" href="classBench.html#af15b42b6084454f59cd63cf9968a2a5b">strategyNextI</a>;          
-<a name="l00055"></a><a class="code" href="classBench.html#a4a1797a7ffaa0ce346274ac63f2379b3">00055</a>   <a class="code" href="classStrategyNextJ.html" title="Strategy Pattern to return the next j (value) to consider, given i (variable)">StrategyNextJ</a>         <a class="code" href="classBench.html#a4a1797a7ffaa0ce346274ac63f2379b3">strategyNextJ</a>;          
-<a name="l00058"></a><a class="code" href="classBench.html#a88dbf079cc6c2392132efc8038b88443">00058</a>   <a class="code" href="classStrategyReset.html" title="Strategy Pattern to perform a reset.">StrategyReset</a>         <a class="code" href="classBench.html#a88dbf079cc6c2392132efc8038b88443">strategyReset</a>;          
-<a name="l00067"></a>00067   <span class="keywordtype">int</span> <a class="code" href="classBench.html#a5d88ce438e5ff9259f872bdcfe86621e" title="Wrapper when user function costIfSwap is not defined.">costIfSwap</a>( <span class="keywordtype">int</span> currentCost, <span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j );
-<a name="l00068"></a>00068 
-<a name="l00075"></a>00075   <span class="keywordtype">int</span> <a class="code" href="classBench.html#af27d153047259b80af7b556c0bfdadab" title="Wrapper when user function costOnVariable is not defined.">costOnVariable</a>( <span class="keywordtype">int</span> k );
-<a name="l00076"></a>00076 
-<a name="l00082"></a>00082   <span class="keywordtype">void</span> <a class="code" href="classBench.html#a8f1d5b7a37082ec2f2bb15b9e3820c96" title="Wrapper when user function displaySolution is not defined.">displaySolution</a>( <a class="code" href="classAdData.html" title="Main data structure.">AdData</a> *p_ad );
-<a name="l00083"></a>00083 
-<a name="l00089"></a>00089   <span class="keywordtype">void</span> <a class="code" href="classBench.html#a0985e6c65a50742c898dd717dce2294c" title="Wrapper when user function executedSwap is not defined.">executedSwap</a>( <span class="keywordtype">int</span> k1, <span class="keywordtype">int</span> k2 );
-<a name="l00090"></a>00090 
-<a name="l00097"></a>00097   <span class="keywordtype">int</span> <a class="code" href="classBench.html#a2ace948d46b3bcc7d76b2a4a32b427cd" title="Wrapper when user function nextI is not defined.">nextI</a>( <span class="keywordtype">int</span> i );
-<a name="l00098"></a>00098 
-<a name="l00105"></a>00105   <span class="keywordtype">int</span> <a class="code" href="classBench.html#a5bc8976d21762350873d32e5f64a8d70" title="Wrapper when user function nextJ is not defined.">nextJ</a>( <span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j );
-<a name="l00106"></a>00106 
-<a name="l00114"></a>00114   <span class="keywordtype">int</span> <a class="code" href="classBench.html#a0a317019a5065efe4bc37d1760379786" title="Wrapper when user function reset is not defined.">reset</a>( <span class="keywordtype">int</span> n, <a class="code" href="classAdData.html" title="Main data structure.">AdData</a> *p_ad );
-<a name="l00115"></a>00115 };
+<a name="l00002"></a>00002 <span class="comment"> * Adaptive Framework is a C++ metaheuristics framework.</span>
+<a name="l00003"></a>00003 <span class="comment"> * Please visit https://github.com/richoux/Adaptive_Framework </span>
+<a name="l00004"></a>00004 <span class="comment"> * for further information.</span>
+<a name="l00005"></a>00005 <span class="comment"> * </span>
+<a name="l00006"></a>00006 <span class="comment"> * Copyright (C) 2013-2014 Florian Richoux</span>
+<a name="l00007"></a>00007 <span class="comment"> *</span>
+<a name="l00008"></a>00008 <span class="comment"> * This file is part of Adaptive Framework.</span>
+<a name="l00009"></a>00009 <span class="comment"> * Adaptive Framework is free software: you can redistribute it and/or </span>
+<a name="l00010"></a>00010 <span class="comment"> * modify it under the terms of the GNU General Public License as published </span>
+<a name="l00011"></a>00011 <span class="comment"> * by the Free Software Foundation, either version 3 of the License, or</span>
+<a name="l00012"></a>00012 <span class="comment"> * (at your option) any later version.</span>
+<a name="l00013"></a>00013 <span class="comment"></span>
+<a name="l00014"></a>00014 <span class="comment"> * Adaptive Framework is distributed in the hope that it will be useful,</span>
+<a name="l00015"></a>00015 <span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<a name="l00016"></a>00016 <span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<a name="l00017"></a>00017 <span class="comment"> * GNU General Public License for more details.</span>
+<a name="l00018"></a>00018 <span class="comment"></span>
+<a name="l00019"></a>00019 <span class="comment"> * You should have received a copy of the GNU General Public License</span>
+<a name="l00020"></a>00020 <span class="comment"> * along with  Adaptive Framework. If not, see http://www.gnu.org/licenses/.</span>
+<a name="l00021"></a>00021 <span class="comment"> */</span>
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023 
+<a name="l00037"></a><a class="code" href="classBench.html">00037</a> <span class="keyword">class </span><a class="code" href="classBench.html" title="Benchmark mother class.">Bench</a>
+<a name="l00038"></a>00038 {
+<a name="l00039"></a>00039  <span class="keyword">public</span>:
+<a name="l00040"></a>00040 
+<a name="l00041"></a><a class="code" href="classBench.html#a27ed9ea3eb2b29027e79e31adf331d86">00041</a>   <a class="code" href="classStrategyCostSwap.html" title="Strategy Pattern to compute the cost of a swap.">StrategyCostSwap</a>      <a class="code" href="classBench.html#a27ed9ea3eb2b29027e79e31adf331d86">strategyCostSwap</a>;       
+<a name="l00043"></a><a class="code" href="classBench.html#a2ce57cda8198f6be72fd0ac045b06839">00043</a>   <a class="code" href="classStrategyCostVar.html" title="Strategy Pattern to compute the projected cost on a variable.">StrategyCostVar</a>       <a class="code" href="classBench.html#a2ce57cda8198f6be72fd0ac045b06839">strategyCostVar</a>;        
+<a name="l00046"></a><a class="code" href="classBench.html#a31569ae22eda31c68257050276fa6fee">00046</a>   <a class="code" href="classStrategyDisplaySol.html" title="Strategy Pattern to display the solution.">StrategyDisplaySol</a>    <a class="code" href="classBench.html#a31569ae22eda31c68257050276fa6fee">strategyDisplaySol</a>;     
+<a name="l00048"></a><a class="code" href="classBench.html#a8737cee0eb80295048068322c9a20359">00048</a>   <a class="code" href="classStrategyExecSwap.html" title="Strategy Pattern to execute a swap.">StrategyExecSwap</a>      <a class="code" href="classBench.html#a8737cee0eb80295048068322c9a20359">strategyExecSwap</a>;       
+<a name="l00050"></a><a class="code" href="classBench.html#af15b42b6084454f59cd63cf9968a2a5b">00050</a>   <a class="code" href="classStrategyNextI.html" title="Strategy Pattern to return the next i (variable) to consider.">StrategyNextI</a>         <a class="code" href="classBench.html#af15b42b6084454f59cd63cf9968a2a5b">strategyNextI</a>;          
+<a name="l00053"></a><a class="code" href="classBench.html#a4a1797a7ffaa0ce346274ac63f2379b3">00053</a>   <a class="code" href="classStrategyNextJ.html" title="Strategy Pattern to return the next j (value) to consider, given i (variable)">StrategyNextJ</a>         <a class="code" href="classBench.html#a4a1797a7ffaa0ce346274ac63f2379b3">strategyNextJ</a>;          
+<a name="l00056"></a><a class="code" href="classBench.html#a88dbf079cc6c2392132efc8038b88443">00056</a>   <a class="code" href="classStrategyReset.html" title="Strategy Pattern to perform a reset.">StrategyReset</a>         <a class="code" href="classBench.html#a88dbf079cc6c2392132efc8038b88443">strategyReset</a>;          
+<a name="l00065"></a>00065   <span class="keywordtype">int</span> <a class="code" href="classBench.html#a5d88ce438e5ff9259f872bdcfe86621e" title="Wrapper when user function costIfSwap is not defined.">costIfSwap</a>( <span class="keywordtype">int</span> currentCost, <span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j );
+<a name="l00066"></a>00066 
+<a name="l00073"></a>00073   <span class="keywordtype">int</span> <a class="code" href="classBench.html#af27d153047259b80af7b556c0bfdadab" title="Wrapper when user function costOnVariable is not defined.">costOnVariable</a>( <span class="keywordtype">int</span> k );
+<a name="l00074"></a>00074 
+<a name="l00080"></a>00080   <span class="keywordtype">void</span> <a class="code" href="classBench.html#a8f1d5b7a37082ec2f2bb15b9e3820c96" title="Wrapper when user function displaySolution is not defined.">displaySolution</a>( <a class="code" href="classAdData.html" title="Main data structure.">AdData</a> *p_ad );
+<a name="l00081"></a>00081 
+<a name="l00087"></a>00087   <span class="keywordtype">void</span> <a class="code" href="classBench.html#a0985e6c65a50742c898dd717dce2294c" title="Wrapper when user function executedSwap is not defined.">executedSwap</a>( <span class="keywordtype">int</span> k1, <span class="keywordtype">int</span> k2 );
+<a name="l00088"></a>00088 
+<a name="l00095"></a>00095   <span class="keywordtype">int</span> <a class="code" href="classBench.html#a2ace948d46b3bcc7d76b2a4a32b427cd" title="Wrapper when user function nextI is not defined.">nextI</a>( <span class="keywordtype">int</span> i );
+<a name="l00096"></a>00096 
+<a name="l00103"></a>00103   <span class="keywordtype">int</span> <a class="code" href="classBench.html#a5bc8976d21762350873d32e5f64a8d70" title="Wrapper when user function nextJ is not defined.">nextJ</a>( <span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j );
+<a name="l00104"></a>00104 
+<a name="l00112"></a>00112   <span class="keywordtype">int</span> <a class="code" href="classBench.html#a0a317019a5065efe4bc37d1760379786" title="Wrapper when user function reset is not defined.">reset</a>( <span class="keywordtype">int</span> n, <a class="code" href="classAdData.html" title="Main data structure.">AdData</a> *p_ad );
+<a name="l00113"></a>00113 };
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -146,7 +144,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 7 2014 16:51:15 for Adaptive Search C++ by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Apr 3 2014 13:35:03 for Adaptive Search C++ by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>
