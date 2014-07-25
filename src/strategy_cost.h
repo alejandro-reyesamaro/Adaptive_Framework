@@ -5,7 +5,7 @@
  *
  * \file strategy_cost.h
  * \brief Strategy Pattern to compute the projected cost on a variable
- * \author Florian Richoux, Alejandro
+ * \author Florian Richoux, Alejandro Reyes
  * \date 2014-07-10
  */
 

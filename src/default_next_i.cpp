@@ -3,5 +3,5 @@
 //! Default strategy to return the next i (variable) to consider
 int DefaultNextI::nextI( int i )
 {
-    // TODO:
+    return i + 1;
 }

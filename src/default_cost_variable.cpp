@@ -3,5 +3,5 @@
 //! Default strategy to compute the projected cost on a variable
 int DefaultCostVariable::costOnVariable( int k )
 {
-    // TODO:
+    return 0;
 }

@@ -3,5 +3,5 @@
 //! Default strategy to display the solution
 void DefaultDisplaySolution::displaySolution( std::shared_ptr<AdData> p_ad )
 {
-    // TODO:
+    //TODO
 }

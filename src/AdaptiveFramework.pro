@@ -36,7 +36,8 @@ HEADERS += \
     default_execute_swap.h \
     default_next_i.h \
     default_next_j.h \
-    default_reset.h
+    default_reset.h \
+    strategy_cost_solution.h
 
 QMAKE_CXXFLAGS += -std=c++11
 
