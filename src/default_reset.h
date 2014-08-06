@@ -11,6 +11,7 @@
 
 #include "strategy_reset.h"
 #include <vector>
+#include <memory>
 
 /*!
  * \class DefaultReset default_reset.h
@@ -26,7 +27,7 @@ class DefaultReset : public StrategyReset
         /*!
         * \param n Number of reset loop to perform.
         * \param p_ad A given solution.
-        * \param (out parameter) The number of swaps already executed
+        * \param number_of_swaps (out parameter) The number of swaps already executed
         * \return The new cost, or -1 if unknown.
         */
         int reset(int n, std::vector<int> solution , int * number_of_swaps);

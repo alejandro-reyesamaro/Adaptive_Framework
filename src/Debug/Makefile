@@ -57,7 +57,8 @@ SOURCES       = ../main.cpp \
 		../default_execute_swap.cpp \
 		../default_next_i.cpp \
 		../default_next_j.cpp \
-		../default_reset.cpp 
+		../default_reset.cpp \
+		../af_random_tools.cpp 
 OBJECTS       = main.o \
 		solver.o \
 		benchmark.o \
@@ -70,7 +71,8 @@ OBJECTS       = main.o \
 		default_execute_swap.o \
 		default_next_i.o \
 		default_next_j.o \
-		default_reset.o
+		default_reset.o \
+		af_random_tools.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/shell-unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
@@ -374,6 +376,9 @@ default_reset.o: ../default_reset.cpp ../default_reset.h \
 		../strategy_reset.h \
 		../ad_data.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o default_reset.o ../default_reset.cpp
+
+af_random_tools.o: ../af_random_tools.cpp ../af_random_tools.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o af_random_tools.o ../af_random_tools.cpp
 
 ####### Install
 

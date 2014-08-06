@@ -15,7 +15,8 @@ SOURCES += main.cpp \
     default_execute_swap.cpp \
     default_next_i.cpp \
     default_next_j.cpp \
-    default_reset.cpp
+    default_reset.cpp \
+    af_random_tools.cpp
 
 HEADERS += \
     solver.h \
@@ -37,7 +38,8 @@ HEADERS += \
     default_next_i.h \
     default_next_j.h \
     default_reset.h \
-    strategy_cost_solution.h
+    strategy_cost_solution.h \
+    af_random_tools.h
 
 QMAKE_CXXFLAGS += -std=c++11
 
